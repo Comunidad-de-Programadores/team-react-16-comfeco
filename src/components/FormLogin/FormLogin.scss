@@ -1,0 +1,15 @@
+@import "../../assets/style/Main.scss";
+
+.formulario--login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forgot {
+    margin: 17px 0;
+    text-decoration: none;
+    color: $yellow-color;
+    outline: none;
+    text-align: right;
+}

@@ -1,15 +1,8 @@
 @import "../../assets/style/Vars.scss";
 
 h1 {
-    margin-top: 20vh;
+    margin-top: 10vh;
     text-align: center;
-}
-
-.formulario {
-    background: white;
-    max-width: 30.625rem;
-    margin: 0px auto;
-    padding: 2.25rem;
 }
 
 .formulario--recover {
@@ -23,27 +16,6 @@ h1 {
     margin-bottom: 2rem;
 }
 
-input[type="text"] {
-    font-weight: 900;
-    padding: 15px 15px;
-    text-decoration: none;
-    border-bottom: 2px solid gray;
-    font-family: $text-font;
-    font-size: 1rem;
-    width: 100%;
-    outline: none;
-    padding: 0.9375rem 0;
-    background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid fade($yellow-color, 50%);
-    vertical-align: top;
-}
-
-input[type="text"]:focus {
-    border-bottom: 2px solid $yellow-color;
-}
 
 // label {
 //     color: #777777;
@@ -71,23 +43,3 @@ input[type="text"]:focus {
 //     line-height: 0.75rem;
 //     color: #777777;
 // }
-
-button {
-    margin: 0 auto;
-    width: 150px;
-    background-color: $yellow-color;
-    border: none;
-    color: $purple-color;
-    font-weight: 900;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50px;
-}
-
-button:hover {
-    transition: ease-in-out;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05),
-        0 7px 7px 0 rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-}
