@@ -1,10 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
   return (
     <>
-      <p>Login</p>
+      <form onSubmit="">
+        <input placeholder="Usuario"></input>
+        <input placeholder="Contraseña"></input>
+        <Link>
+          <p>¿Olvidaste tu contraseña?</p>
+        </Link>
+        <button>Login</button>
+      </form>
     </>
   );
 };
