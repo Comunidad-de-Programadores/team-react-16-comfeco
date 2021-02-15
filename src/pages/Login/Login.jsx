@@ -2,8 +2,9 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import { IconLoginImg } from "../../assets/icon/IconLoginImg";
 import { RegisterIcon } from "../../assets/icon/RegisterIcon";
+
 import FormLogin from "../../components/FormLogin/FormLogin";
-// import FormRegister from "../../components/FormLogin/FormRegister";
+import FormRegister from "../../components/FormRegister/FormRegister";
 import style from "./Login.scss";
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
             <FormLogin />
 
             {/** FORM-REGISTER */}
-            {/* <FormRegister /> */}
+            <FormRegister />
           </div>
         </div>
         {/** PANEL-AZUL */}

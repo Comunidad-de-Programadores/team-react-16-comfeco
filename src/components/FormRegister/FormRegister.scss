@@ -1,0 +1,27 @@
+@import "../../assets/style/Main.scss";
+
+.formulario--register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// .formulario--register {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     padding: 0rem 5rem;
+//     transition: all 0.2s 0.7s;
+//     overflow: hidden;
+//     grid-column: 1 / 2;
+//     grid-row: 1 / 2;
+// }
+
+.forgot {
+    margin: 17px 0;
+    text-decoration: none;
+    color: $yellow-color;
+    outline: none;
+    text-align: right;
+}
