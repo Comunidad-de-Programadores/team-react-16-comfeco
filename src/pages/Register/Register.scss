@@ -1,0 +1,47 @@
+@import "../../assets/style/Vars.scss";
+@import "../../assets/style/Main.scss";
+
+.container.change {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    min-height: 85vh;
+    overflow: hidden;
+    font-family: $title-font;
+}
+
+.container--login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: $title-font;
+    width: 50%;
+}
+
+.container.change:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 52%;
+    transform: translate(100%, -50%);
+    background-image: linear-gradient(40deg, $purple-color 20%, $yellow-color 30%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.btn-wr {
+    margin: 40px 0px;
+}
+
+h3 {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    line-height: 1;
+    font-size: 1.5em;
+}

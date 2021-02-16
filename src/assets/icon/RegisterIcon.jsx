@@ -3,8 +3,8 @@ import React from "react";
 export function RegisterIcon() {
   return (
     <svg
-      width="431"
-      height="369"
+      width="351"
+      height="289"
       viewBox="0 0 431 369"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
