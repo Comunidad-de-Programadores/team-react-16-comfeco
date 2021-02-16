@@ -1,5 +1,7 @@
-import style from "./Error.module.css";
+import style from "./Error.scss";
 
-export const Error = (props) => {
+const Error = (props) => {
   return <div className={style.container}>{props.children}</div>;
 };
+
+export default Error;

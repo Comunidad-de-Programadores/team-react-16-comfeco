@@ -1,4 +1,4 @@
-export function registerValidation(data) {
+function registerValidation(data) {
   let errors = {};
 
   //Validar Username---------------------------->
@@ -27,3 +27,4 @@ export function registerValidation(data) {
   }
   return errors;
 }
+export default registerValidation;

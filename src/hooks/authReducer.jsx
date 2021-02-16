@@ -1,6 +1,6 @@
 import { types } from "../types";
 
-export const authReducer = (state = {}, action) => {
+const authReducer = (state = {}, action) => {
   switch (action.type) {
     case types.login:
       return {
@@ -17,3 +17,5 @@ export const authReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export default authReducer;

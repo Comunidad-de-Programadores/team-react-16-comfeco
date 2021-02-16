@@ -1,4 +1,4 @@
-export function loginValidation(data) {
+function loginValidation(data) {
   let errors = {};
 
   //Validar Username------------------------------>
@@ -16,3 +16,4 @@ export function loginValidation(data) {
 
   return errors;
 }
+export default loginValidation;

@@ -1,0 +1,478 @@
+.container {
+    position: relative;
+    width: 100vw;
+    background-color: var(--background);
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: var(--font-title);
+}
+
+.formsContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.signinSignup {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+.Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Form.signUpForm {
+    opacity: 0;
+    z-index: 1;
+}
+
+.Form.signInForm {
+    z-index: 2;
+}
+
+.title {
+    font-size: 2.2em;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-family: var(--font-title);
+}
+
+.inputField {
+    max-width: 380px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--primary);
+    text-align: left;
+}
+
+.inputField:hover {
+    border-bottom: 2px solid var(--secondary);
+    color: var(--primary);
+}
+
+.inputField .input {
+    width: 100%;
+    padding: 0 5px;
+    height: 25px;
+    font-size: 16px;
+    border: none;
+    background: var(--background);
+    outline: none;
+    font-family: var(--font-content);
+}
+
+.inputField input:-webkit-autofill {
+    background-color: 0 0 0 30px rgb(245, 245, 245) inset !important;
+    border-radius: 6px;
+}
+
+.Form span label a,
+.Form a {
+    text-decoration: none;
+    font-family: var(--font-title);
+    color: var(--primary);
+    padding-top: 0.5rem;
+}
+
+.Form a span {
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.btn {
+    width: 150px;
+    background-color: var(--secondary);
+    border: none;
+    height: 49px;
+    border-radius: 49px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.btn_disabled {
+    background-color: rgb(243, 231, 163);
+}
+
+.panelsContainer {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background: var(--background-gradient);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.image {
+    width: 100%;
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+}
+
+.leftPanel {
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.rightPanel {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+    color: var(--background);
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+    margin: 0 auto;
+}
+
+.panel .h3 {
+    font-weight: bold;
+    font-family: var(--font-title);
+    line-height: 1;
+    font-size: 1.5em;
+}
+
+.btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid var(--background);
+    color: var(--background);
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.rightPanel .image,
+.rightPanel .content {
+    transform: translateX(800px);
+}
+
+/* ANIMATION */
+
+.container.signUpMode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.container.signUpMode .leftPanel .image,
+.container.signUpMode .leftPanel .content {
+    transform: translateX(-800px);
+}
+
+.container.signUpMode .signinSignup {
+    left: 25%;
+}
+
+.container.signUpMode .Form.signUpForm {
+    opacity: 1;
+    z-index: 2;
+}
+
+.container.signUpMode .Form.signInForm {
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.signUpMode .rightPanel .image,
+.container.signUpMode .rightPanel .content {
+    transform: translateX(0%);
+}
+
+.container.signUpMode .leftPanel {
+    pointer-events: none;
+}
+
+.container.signUpMode .rightPanel {
+    pointer-events: all;
+}
+
+@media (min-width: 1020px) {
+    .rightPanel {
+        top: 10%;
+        left: 45%;
+        position: absolute;
+    }
+
+    .btn.transparent {
+        margin-bottom: 4rem;
+    }
+
+    .leftPanel {
+        top: 10%;
+        position: absolute;
+    }
+}
+
+@media (max-width: 870px) {
+    .container {
+        min-height: 1000px;
+        height: 100vh;
+    }
+
+    .signinSignup {
+        width: 100%;
+        top: 80%;
+        transform: translate(-50%, -100%);
+        transition: 1s 0.8s ease-in-out;
+    }
+
+    .signinSignup,
+    .container.signUpMode .signinSignup {
+        left: 50%;
+    }
+
+    .panelsContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .panel {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+        grid-column: 1/2;
+    }
+
+    .rightPanel {
+        grid-row: 3/4;
+    }
+
+    .leftPanel {
+        grid-row: 1/2;
+    }
+
+    .image {
+        width: 200px;
+        transition: transform 0.9s ease-in-out;
+        transition-delay: 0.6s;
+    }
+
+    .panel .content {
+        padding-right: 15%;
+        transition: transform 0.9s ease-in-out;
+        transition-delay: 0.8s;
+    }
+
+    .panel .h3 {
+        font-size: 1.2em;
+    }
+
+    .panel .p {
+        font-size: 0.7em;
+        padding: 0.5rem 0;
+    }
+
+    .btn.transparent {
+        width: 110px;
+        height: 35px;
+        font-size: 0.7em;
+    }
+
+    .container:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+
+    .container.signUpMode:before {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+
+    .container.signUpMode .left-Pnel .image,
+    .container.signUpMode .left-Pnel .content {
+        transform: translateY(-300px);
+    }
+
+    .container.signUpMode .rightPanel .image,
+    .container.signUpMode .rightPanel .content {
+        transform: translateY(0px);
+    }
+
+    .rightPanel .image,
+    .rightPanel .content {
+        transform: translateY(300px);
+    }
+
+    .container.signUpMode .signinSignup {
+        top: 5%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 570px) {
+    .container {
+        height: 100vh;
+        min-height: 650px;
+    }
+
+    .signinSignup {
+        padding: 0 1.5rem;
+        align-items: flex-end;
+    }
+
+    .panelsContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px;
+    }
+
+    .panel {
+        flex-direction: row;
+
+        align-items: center;
+        padding: 2.5rem 8%;
+        grid-column: 1/2;
+    }
+
+    .rightPanel {
+        margin-top: 4.5rem;
+        grid-row: 3/4;
+    }
+
+    .leftPanel {
+        margin-bottom: 3rem;
+        grid-row: 1/2;
+    }
+
+    .Form {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .inputField {
+        width: 80vw;
+    }
+
+    .panel .content {
+        padding: 0.5rem 1rem;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .btn.transparent {
+        margin-bottom: 2.5rem;
+    }
+
+    .container:before {
+        bottom: 72%;
+        left: 50%;
+    }
+
+    .container.signUpMode:before {
+        bottom: 28%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        margin: 0;
+    }
+
+    .Form {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .inputField {
+        width: 80vw;
+    }
+
+    .panel .content {
+        margin-top: 2rem;
+    }
+
+    .leftPanel {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .Form {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .inputField {
+        width: 80vw;
+    }
+
+    .panel .content {
+        margin-top: 1rem;
+    }
+}

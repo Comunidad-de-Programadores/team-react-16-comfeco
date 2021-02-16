@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useFormValidation(stateInitial, validate, handleFormSubmit) {
+function useFormValidation(stateInitial, validate, handleFormSubmit) {
   const [data, saveData] = useState(stateInitial);
 
   const [errors, showErrors] = useState({});
@@ -47,3 +47,4 @@ export function useFormValidation(stateInitial, validate, handleFormSubmit) {
     handleBlur,
   };
 }
+export default useFormValidation;

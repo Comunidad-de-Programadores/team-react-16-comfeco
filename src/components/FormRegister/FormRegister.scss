@@ -1,0 +1,21 @@
+@import "../../assets/style/Main.scss";
+
+.formulario--register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.privacy {
+    margin: 17px 0;
+    color: $purple-color;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    margin-top: -5px;
+    width: 10%;
+}
