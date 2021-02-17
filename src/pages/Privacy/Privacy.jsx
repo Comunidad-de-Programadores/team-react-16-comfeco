@@ -4,8 +4,8 @@ import "./Privacy.scss";
 const Privacy = () => {
   return (
     <>
-      <section>
-        <p>
+      <section className='privacy'>
+        <p className='privacy-item'>
           <strong>POLÍTICA DE PRIVACIDAD</strong>
         </p>
         <p>
@@ -22,7 +22,7 @@ const Privacy = () => {
           dichos cambios.
         </p>
 
-        <p>
+        <p className='privacy-item'>
           <strong>Información que es recogida</strong>
         </p>
         <p>
@@ -33,7 +33,7 @@ const Privacy = () => {
           algún pedido o realizar una entrega o facturación.
         </p>
 
-        <p>
+        <p className='privacy-item'>
           <strong>Uso de la información recogida</strong>
         </p>
         <p>
@@ -54,7 +54,7 @@ const Privacy = () => {
           asegurarnos que no exista ningún acceso no autorizado.
         </p>
 
-        <p>
+        <p className='privacy-item'>
           <strong>Cookies</strong>
         </p>
         <p>
@@ -82,7 +82,7 @@ const Privacy = () => {
           nuestros servicios.
         </p>
 
-        <p>
+        <p className='privacy-item'>
           <strong>Enlaces a Terceros</strong>
         </p>
         <p>
@@ -96,7 +96,7 @@ const Privacy = () => {
           que usted está de acuerdo con estas.
         </p>
 
-        <p>
+        <p className='privacy-item'>
           <strong>Control de su información personal</strong>
         </p>
         <p>
