@@ -27,8 +27,8 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ user, dispatch }}>
-      <Layout>
-        <Router>
+      <Router>
+        <Layout>
           <Switch>
             <PublicRoute
               exact
@@ -46,8 +46,8 @@ function App() {
             <Route exact path="/politicas-de-privacidad" component={Privacy} />
             <Route exact path="/recuperar-contraseña" component={ForgotPass} />
           </Switch>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
     </AuthContext.Provider>
   );
 }
