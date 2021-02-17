@@ -1,30 +1,55 @@
-import "../assets/style/App.scss";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import Layout from "../components/Layout/Layout";
+import { useEffect, useReducer } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AuthForm from "../pages/AuthForm/AuthForm";
+import ForgotPass from "../pages/ForgotPass/ForgotPass";
 import Home from "../pages/Home/Home";
 import Privacy from "../pages/Privacy/Privacy";
-import Login from "../pages/Login/Login";
-import RecoverPass from "../pages/RecoverPass/RecoverPass";
-import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
+import AuthContext from "../hooks/AuthContext";
+import authReducer from "../hooks/authReducer";
+import Layout from "../components/Layout/Layout";
 
-const App = () => {
+const init = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Layout>
-          <Switch>
-            <Route path="/home" component={Home} />
-            <Route path="/privacy-policy" component={Privacy} />
-            <Route path="/recover-pass" component={RecoverPass} />
-            <Route path="/register" component={Register} />
-            <Route path="/login" component={Login} />
-            <Route path="/" component={Login} />
-          </Switch>
-        </Layout>
-      </BrowserRouter>
-    </>
+    JSON.parse(localStorage.getItem("user")) || {
+      logged: false,
+    }
   );
 };
+
+function App() {
+  const [user, dispatch] = useReducer(authReducer, {}, init);
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
+
+  return (
+    <AuthContext.Provider value={{ user, dispatch }}>
+      <Layout>
+        <Router>
+          <Switch>
+            <PublicRoute
+              exact
+              path="/"
+              component={AuthForm}
+              isAuth={user.logged}
+            />
+
+            <PrivateRoute
+              exact
+              path="/home"
+              component={Home}
+              isAuth={user.logged}
+            />
+            <Route exact path="/politicas-de-privacidad" component={Privacy} />
+            <Route exact path="/recuperar-contraseña" component={ForgotPass} />
+          </Switch>
+        </Router>
+      </Layout>
+    </AuthContext.Provider>
+  );
+}
 
 export default App;

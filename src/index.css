@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+:root {
+  --primary: #69156A;
+  --secondary: #FFB703;
+  --background: #fff;
+  --background-gradient: linear-gradient(60deg,
+      #69156A 20%,
+      #FFB703 35%,
+      #FFB703 53%,
+      #69156A 72%);
+  --font-title: 'Montserrat Alternates',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-content: 'Poppins',
+    sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+
 }

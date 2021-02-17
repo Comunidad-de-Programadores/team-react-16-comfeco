@@ -1,22 +1,111 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./FormLogin.scss";
+import { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import AuthContext from "../../hooks/AuthContext";
+import useFormValidation from "../../hooks/useFormValidation";
+import loginValidation from "../../rules/loginValidate";
+import Error from "../Error/Error";
+import PasswordIcon from "../../assets/icon/PasswordIcon";
+import style from "../../assets/style/Main.module.scss";
+import { types } from "../../types";
+import UserIcon from "../../assets/icon/UserIcon";
 
+const INITIAL_STATE = {
+  username: "",
+  password: "",
+};
 const FormLogin = () => {
+  const {
+    data,
+    errors,
+    handleChange,
+    handleSubmit,
+    handleBlur,
+  } = useFormValidation(INITIAL_STATE, loginValidation, userAuth);
+
+  const { dispatch } = useContext(AuthContext);
+
+  const history = useHistory();
+
+  const { username, password } = data;
+
+  function userAuth() {
+    try {
+      dispatch({
+        type: types.login,
+        payload: {
+          username,
+          password,
+        },
+      });
+      console.log(data);
+      history.push("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const FormInput = [
+    {
+      type: "username",
+      name: "username",
+      placeholder: "Usuario",
+      icon: <UserIcon />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+      onChange: handleChange,
+      onBlur: handleBlur,
+      value: username,
+      error: errors.username && <Error>{errors.username}</Error>,
+    },
+    {
+      type: "password",
+      name: "password",
+      placeholder: "Contraseña",
+      icon: <PasswordIcon />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+      onChange: handleChange,
+      onBlur: handleBlur,
+      value: password,
+      error: errors.password && <Error>{errors.password}</Error>,
+    },
+  ];
+
   return (
-    <>
-      <div className="container">
-        <form className="formulario--login">
-          <input type="text" placeholder="Usuario"></input>
-          <input type="password" placeholder="Contraseña"></input>
-          <Link to="/" className="forgot">
-            <p>¿Olvidaste tu contraseña?</p>
-          </Link>
-          <button>Login</button>
-        </form>
-        <div></div>
-      </div>
-    </>
+    <form
+      onSubmit={handleSubmit}
+      className={`${style.Form} ${style.signInForm}`}
+      noValidate
+    >
+      <h2 className={style.title}>Iniciar Sesión</h2>
+      {FormInput.map((item, i) => {
+        return (
+          <span key={i}>
+            <div className={item.classContainer}>
+              {item.icon}
+              <input
+                type={item.type}
+                name={item.name}
+                placeholder={item.placeholder}
+                className={item.classInput}
+                value={item.value}
+                onChange={item.onChange}
+                onBlur={item.onBlur}
+              />
+            </div>
+            {item.error}
+          </span>
+        );
+      })}
+      <Link to="./recuperar-contraseña">
+        <span>¿Olvidate la Contraseña?</span>
+      </Link>
+      <input
+        type="submit"
+        value="Iniciar"
+        className={`${style.btn} ${style.Solid}`}
+      />
+    </form>
   );
 };
 

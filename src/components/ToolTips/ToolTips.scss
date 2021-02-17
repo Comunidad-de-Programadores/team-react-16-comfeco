@@ -1,0 +1,65 @@
+/*== start of code for tooltips ==*/
+.tool {
+  cursor: help;
+  position: relative;
+  width: 100%;
+}
+/*== common styles for both parts of tool tip ==*/
+.tool::before,
+.tool::after {
+  left: 60%;
+  opacity: 0;
+  position: absolute;
+  z-index: -100;
+}
+.tool:hover::before,
+.tool:focus::before,
+.tool:hover::after,
+.tool:focus::after {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 100;
+}
+/*== pointer tip ==*/
+.tool::before {
+  border-style: solid;
+  border-width: 1em 0.75em 0 0.75em;
+  border-color: #a4b602 transparent transparent transparent;
+  bottom: 100%;
+  content: "";
+  margin-left: -0.5em;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26),
+    opacity 0.65s 0.5s;
+  transform: scale(0.6) translateY(-90%);
+}
+.tool:hover::before,
+.tool:focus::before {
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+}
+/*== speech bubble ==*/
+.tool::after {
+  background: #d5ec02;
+  border-radius: 0.25em;
+  bottom: 140%; /*baja el tooltip**/
+  color: #7a0357;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  content: attr(data-tip);
+  line-height: 1.2;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  transform: scale(0.6) translateY(50%);
+  width: 17.5em;
+}
+.tool:hover::after,
+.tool:focus::after {
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
+}
+@media (max-width: 760px) {
+  .tool::after {
+    font-size: 0.75em;
+    margin-left: -5em;
+    width: 10em;
+  }
+}
