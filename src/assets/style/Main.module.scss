@@ -2,9 +2,10 @@
     position: relative;
     width: 100vw;
     background-color: var(--background);
-    min-height: 87vh;
+    min-height: 85vh;
     overflow: hidden;
     font-family: var(--font-title);
+    z-index: 10;
 }
 
 .formsContainer {
@@ -59,7 +60,7 @@
 .inputField {
     max-width: 380px;
     width: 100%;
-    margin: 10px 0;
+    margin: 17px 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -73,6 +74,7 @@
 }
 
 .inputField .input {
+    width: 100%;
     padding: 0 5px;
     height: 25px;
     font-size: 16px;
@@ -99,7 +101,7 @@
     font-weight: bold;
     color: var(--primary);
     text-decoration: underline;
-    font-size: 0.8rem;
+    // font-size: 0.8rem;
 }
 
 .btn {

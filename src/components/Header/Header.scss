@@ -1,7 +1,10 @@
 @import '../../assets/style/Media.scss';
 
 header {
+    position: relative;
+    background: transparent;
     margin: 8px 0 4px 8px;
+    z-index: -1;
 }
 
 img {

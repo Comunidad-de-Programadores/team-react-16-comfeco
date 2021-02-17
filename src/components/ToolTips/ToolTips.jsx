@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ToolTips.scss";
+import style from "./ToolTips.module.scss";
 
 function Tooltips(props) {
   return (

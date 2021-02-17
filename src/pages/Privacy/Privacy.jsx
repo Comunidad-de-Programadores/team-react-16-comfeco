@@ -4,13 +4,13 @@ import "./Privacy.scss";
 const Privacy = () => {
   return (
     <>
-      <section className='privacy'>
-        <p className='privacy-item'>
+      <section className="privacy">
+        <p className="privacy-item">
           <strong>POLÍTICA DE PRIVACIDAD</strong>
         </p>
         <p>
           El presente Política de Privacidad establece los términos en que
-          Community Fest And Code (C#MFECO) usa y protege la información que es
+          Community Fest And Code (COMFECO) usa y protege la información que es
           proporcionada por sus usuarios al momento de utilizar su sitio web.
           Esta compañía está comprometida con la seguridad de los datos de sus
           usuarios. Cuando le pedimos llenar los campos de información personal
@@ -22,7 +22,7 @@ const Privacy = () => {
           dichos cambios.
         </p>
 
-        <p className='privacy-item'>
+        <p className="privacy-item">
           <strong>Información que es recogida</strong>
         </p>
         <p>
@@ -33,7 +33,7 @@ const Privacy = () => {
           algún pedido o realizar una entrega o facturación.
         </p>
 
-        <p className='privacy-item'>
+        <p className="privacy-item">
           <strong>Uso de la información recogida</strong>
         </p>
         <p>
@@ -48,13 +48,13 @@ const Privacy = () => {
           proporcione y podrán ser cancelados en cualquier momento.
         </p>
         <p>
-          Community Fest And Code (C#MFECO) está altamente comprometido para
+          Community Fest And Code (COMFECO) está altamente comprometido para
           cumplir con el compromiso de mantener su información segura. Usamos
           los sistemas más avanzados y los actualizamos constantemente para
           asegurarnos que no exista ningún acceso no autorizado.
         </p>
 
-        <p className='privacy-item'>
+        <p className="privacy-item">
           <strong>Cookies</strong>
         </p>
         <p>
@@ -82,7 +82,7 @@ const Privacy = () => {
           nuestros servicios.
         </p>
 
-        <p className='privacy-item'>
+        <p className="privacy-item">
           <strong>Enlaces a Terceros</strong>
         </p>
         <p>
@@ -96,7 +96,7 @@ const Privacy = () => {
           que usted está de acuerdo con estas.
         </p>
 
-        <p className='privacy-item'>
+        <p className="privacy-item">
           <strong>Control de su información personal</strong>
         </p>
         <p>
@@ -114,7 +114,7 @@ const Privacy = () => {
           requerido por un juez con un orden judicial.
         </p>
         <p>
-          Community Fest And Code (C#MFECO) Se reserva el derecho de cambiar los
+          Community Fest And Code (COMFECO) Se reserva el derecho de cambiar los
           términos de la presente Política de Privacidad en cualquier momento.
         </p>
       </section>

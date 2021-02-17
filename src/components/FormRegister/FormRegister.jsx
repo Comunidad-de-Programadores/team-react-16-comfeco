@@ -4,7 +4,7 @@ import UserIcon from "../../assets/icon/UserIcon";
 import PasswordIcon from "../../assets/icon/PasswordIcon";
 import EmailIcon from "../../assets/icon/EmailIcon";
 import Error from "../Error/Error";
-import Tooltips from "../ToolTips/ToolTips";
+import ToolTips from "../ToolTips/ToolTips";
 import style from "../../assets/style/Main.module.scss";
 import registerValidation from "../../rules/registerValidation";
 import useFormValidation from "../../hooks/useFormValidation";
@@ -121,7 +121,7 @@ const FormRegister = () => {
                   onBlur={handleBlur}
                 />
               ) : (
-                <Tooltips data="El password debe contener minimo 8 carateres">
+                <ToolTips data="El password debe contener minimo 8 carateres">
                   <input
                     type={item.type}
                     name={item.name}
@@ -131,7 +131,7 @@ const FormRegister = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
-                </Tooltips>
+                </ToolTips>
               )}
             </div>
             {item.error}
@@ -139,7 +139,7 @@ const FormRegister = () => {
         );
       })}
       <span>
-        <Tooltips data="Debes aceptar las politicas de privacidad para continuar">
+        <ToolTips data="Debes aceptar las politicas de privacidad para continuar">
           <input
             type="checkbox"
             name="privacity"
@@ -148,9 +148,11 @@ const FormRegister = () => {
             onChange={handleCheckbox}
           />
           <label htmlFor="privacity">
-            <Link to="/politicas-de-privacidad">Politicas de Privacidad</Link>
+            <Link to="/politicas-de-privacidad" target="_blank">
+              Acepto politicas de privacidad.
+            </Link>
           </label>
-        </Tooltips>
+        </ToolTips>
       </span>
       <input type="submit" className={style.btn} value="Registrarse" />
     </form>
