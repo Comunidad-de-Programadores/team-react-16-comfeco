@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       Copyright&nbsp;
       <FaCopyright color="gray" />
-      &nbsp;2021 development by TeamReact#16
+      &nbsp;2021 Todos los derechos reservados.
     </footer>
   );
 };

@@ -1,29 +1,23 @@
 import React from "react";
 import "./ForgotPass.scss";
-// import "../../assets/animation/input-animation.js";
+import style from "../../assets/style/Main.module.scss";
 
 const ForgotPass = () => {
   return (
     <>
-      <h1>Restablecer Contraseña</h1>
-      <div className="formulario">
-        <form
-          action=""
-          className="formulario--recover"
-          name="formulario--recover"
-        >
-          <div className="input-group">
+      <div className="container--forgot">
+        <h1 className={style.title}>Restablecer Contraseña</h1>
+        <form action="" className={`${style.Form}`}>
+          <div className={style.inputField}>
             <input
               type="text"
               id="email"
               name="email"
               placeholder="Correo electronico"
+              className={style.input}
             />
-            {/* <label htmlFor="email" className="label">
-              Correo electrónico
-            </label> */}
           </div>
-          <button>Enviar</button>
+          <button className={`${style.btn} ${style.Solid}`}>Enviar</button>
         </form>
       </div>
     </>

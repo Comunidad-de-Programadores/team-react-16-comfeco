@@ -5,7 +5,7 @@ import PasswordIcon from "../../assets/icon/PasswordIcon";
 import EmailIcon from "../../assets/icon/EmailIcon";
 import Error from "../Error/Error";
 import Tooltips from "../ToolTips/ToolTips";
-import style from "../../pages/AuthForm/AuthForm.scss";
+import style from "../../assets/style/Main.module.scss";
 import registerValidation from "../../rules/registerValidation";
 import useFormValidation from "../../hooks/useFormValidation";
 import AuthContext from "../../hooks/AuthContext";
@@ -59,7 +59,7 @@ const FormRegister = () => {
     {
       type: "username",
       name: "username",
-      placeholder: "Username",
+      placeholder: "Usuario",
       icon: <UserIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -69,7 +69,7 @@ const FormRegister = () => {
     {
       type: "email",
       name: "email",
-      placeholder: "Email",
+      placeholder: "Correo electrónico",
       icon: <EmailIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -79,7 +79,7 @@ const FormRegister = () => {
     {
       type: "password",
       name: "password",
-      placeholder: "Password",
+      placeholder: "Contraseña",
       icon: <PasswordIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -89,7 +89,7 @@ const FormRegister = () => {
     {
       type: "confirm",
       name: "confirm",
-      placeholder: "Confirma tu password",
+      placeholder: "Confirmar contraseña",
       icon: <PasswordIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -104,7 +104,7 @@ const FormRegister = () => {
       className={`${style.Form} ${style.signUpForm}`}
       noValidate
     >
-      <h2 className={style.title}>Sign up</h2>
+      <h2 className={style.title}>Registro</h2>
       {FormInput.map((item, i) => {
         return (
           <span key={i}>
@@ -152,7 +152,7 @@ const FormRegister = () => {
           </label>
         </Tooltips>
       </span>
-      <input type="submit" className={style.btn} value="Sign up" />
+      <input type="submit" className={style.btn} value="Registrarse" />
     </form>
   );
 };

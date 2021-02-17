@@ -5,7 +5,7 @@ import useFormValidation from "../../hooks/useFormValidation";
 import loginValidation from "../../rules/loginValidate";
 import Error from "../Error/Error";
 import PasswordIcon from "../../assets/icon/PasswordIcon";
-import style from "../../pages/AuthForm/AuthForm.scss";
+import style from "../../assets/style/Main.module.scss";
 import { types } from "../../types";
 import UserIcon from "../../assets/icon/UserIcon";
 
@@ -48,7 +48,7 @@ const FormLogin = () => {
     {
       type: "username",
       name: "username",
-      placeholder: "Username",
+      placeholder: "Usuario",
       icon: <UserIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -60,7 +60,7 @@ const FormLogin = () => {
     {
       type: "password",
       name: "password",
-      placeholder: "Password",
+      placeholder: "Contraseña",
       icon: <PasswordIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
@@ -77,7 +77,7 @@ const FormLogin = () => {
       className={`${style.Form} ${style.signInForm}`}
       noValidate
     >
-      <h2 className={style.title}>Sign in</h2>
+      <h2 className={style.title}>Iniciar Sesión</h2>
       {FormInput.map((item, i) => {
         return (
           <span key={i}>
@@ -98,11 +98,11 @@ const FormLogin = () => {
         );
       })}
       <Link to="./recuperar-contraseña">
-        ¿Olvidate la Contraseña? click <span>Aquí</span>
+        <span>¿Olvidate la Contraseña?</span>
       </Link>
       <input
         type="submit"
-        value="Login"
+        value="Iniciar"
         className={`${style.btn} ${style.Solid}`}
       />
     </form>
