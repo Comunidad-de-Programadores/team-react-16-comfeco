@@ -31,7 +31,7 @@ const AuthForm = () => {
               id="sign-up-btn"
               onClick={() => handleToggle()}
             >
-              Resgistrate
+              Regístrate
             </button>
           </div>
           <div className={style.image}>
