@@ -1,9 +1,11 @@
 footer {
-    position: absolute;
+    position: relative;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 5vh;
+    height: 4vh;
     width: 100%;
+    z-index: 10;
 }

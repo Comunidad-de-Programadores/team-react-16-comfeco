@@ -35,7 +35,7 @@ const AuthForm = () => {
             </button>
           </div>
           <div className={style.image}>
-            <img src={LoginImg} alt="pc-registro" draggable="false"/>
+            <img src={LoginImg} alt="pc-registro" draggable="false" />
           </div>
         </div>
         <div className={`${style.panel} ${style.rightPanel}`}>
@@ -50,7 +50,7 @@ const AuthForm = () => {
             </button>
           </div>
           <div className={style.image}>
-            <img src={RegisterImg} alt="pc-registro" draggable="false"/>
+            <img src={RegisterImg} alt="pc-registro" draggable="false" />
           </div>
         </div>
       </div>

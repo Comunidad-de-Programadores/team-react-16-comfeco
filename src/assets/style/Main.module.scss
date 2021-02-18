@@ -1,11 +1,10 @@
 .container {
     position: relative;
     width: 100vw;
-    background-color: var(--background);
-    min-height: 85vh;
+    background-color: transparent;
+    height: 87vh;
     overflow: hidden;
     font-family: var(--font-title);
-    z-index: 10;
 }
 
 .formsContainer {
@@ -150,7 +149,6 @@
     background: var(--background-gradient);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
-    z-index: 6;
 }
 
 .image {
@@ -271,8 +269,8 @@
 
 @media (max-width: 870px) {
     .container {
-        min-height: 1000px;
-        height: 100vh;
+        min-height: 800px;
+        height: 87vh;
     }
 
     .signinSignup {
@@ -375,7 +373,7 @@
 
 @media (max-width: 570px) {
     .container {
-        height: 100vh;
+        height: 87vh;
         min-height: 650px;
     }
 

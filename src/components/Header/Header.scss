@@ -2,11 +2,16 @@
 
 header {
     position: relative;
+    display: flex;
+    justify-content: center;
     background: transparent;
     margin: 8px 0 4px 8px;
-    z-index: -1;
+    z-index: 10;
 }
 
-img {
+header .logo {
+    // transform: translateX(-150%);
+    transition: ease-in-out;
+    background-repeat: no-repeat;
     width: 150px;
 }
