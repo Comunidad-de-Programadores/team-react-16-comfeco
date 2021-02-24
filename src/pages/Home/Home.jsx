@@ -4,6 +4,7 @@ import style from "./Home.module.scss";
 import styles from "../../assets/style/Main.module.scss";
 import AuthContext from "../../hooks/AuthContext";
 import { types } from "../../types";
+import CountDown from "../../components/CountDown/CountDown";
 
 const Home = () => {
   const { user, dispatch } = useContext(AuthContext);
@@ -29,6 +30,7 @@ const Home = () => {
       >
         Salir
       </button>
+      <CountDown />
     </div>
   );
 };
