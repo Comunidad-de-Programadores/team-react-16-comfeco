@@ -7,10 +7,10 @@ import Error from "../Error/Error";
 import PasswordIcon from "../../assets/icon/PasswordIcon";
 import style from "../../assets/style/Main.module.scss";
 import { types } from "../../types";
-import UserIcon from "../../assets/icon/UserIcon";
+import EmailIcon from "../../assets/icon/EmailIcon";
 
 const INITIAL_STATE = {
-  username: "",
+  email: "",
   password: "",
 };
 const FormLogin = () => {
@@ -26,18 +26,17 @@ const FormLogin = () => {
 
   const history = useHistory();
 
-  const { username, password } = data;
+  const { email, password } = data;
 
   function userAuth() {
     try {
       dispatch({
         type: types.login,
         payload: {
-          username,
+          email,
           password,
         },
       });
-      console.log(data);
       history.push("/home");
     } catch (error) {
       console.log(error);
@@ -46,16 +45,16 @@ const FormLogin = () => {
 
   const FormInput = [
     {
-      type: "username",
-      name: "username",
-      placeholder: "Usuario",
-      icon: <UserIcon />,
+      type: "email",
+      name: "email",
+      placeholder: "Email",
+      icon: <EmailIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
       onChange: handleChange,
       onBlur: handleBlur,
-      value: username,
-      error: errors.username && <Error>{errors.username}</Error>,
+      value: email,
+      error: errors.email && <Error>{errors.email}</Error>,
     },
     {
       type: "password",
