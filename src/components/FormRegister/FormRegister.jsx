@@ -38,6 +38,7 @@ const FormRegister = () => {
   };
   function userAuth() {
     if (accept === false) {
+      console.log("Error al aceptar");
       return;
     }
 
@@ -51,8 +52,6 @@ const FormRegister = () => {
         accept,
       },
     });
-    console.log(data);
-    console.log("Registro exitoso");
     history.push("/home");
   }
   const FormInput = [
@@ -87,7 +86,7 @@ const FormRegister = () => {
       error: errors.password && <Error>{errors.password}</Error>,
     },
     {
-      type: "confirm",
+      type: "password",
       name: "confirm",
       placeholder: "Confirmar contraseña",
       icon: <PasswordIcon />,
@@ -138,7 +137,7 @@ const FormRegister = () => {
           </span>
         );
       })}
-      <span>
+      <span className={style.terms}>
         <ToolTips data="Debes aceptar las politicas de privacidad para continuar">
           <input
             type="checkbox"
@@ -148,8 +147,11 @@ const FormRegister = () => {
             onChange={handleCheckbox}
           />
           <label htmlFor="privacity">
+            Acepta que estás de acuerdo con los Términos de servicio. Para
+            obtener más información sobre las prácticas de privacidad, consulte
+            la &nbsp;
             <Link to="/politicas-de-privacidad" target="_blank">
-              Acepto politicas de privacidad.
+              Declaración de privacidad.
             </Link>
           </label>
         </ToolTips>

@@ -7,7 +7,12 @@ import { types } from "../../types";
 
 const Home = () => {
   const { user, dispatch } = useContext(AuthContext);
-  const { username } = user;
+  var data;
+  if (user.username != null) {
+    data = user.username;
+  } else {
+    data = user.email;
+  }
   const history = useHistory();
 
   const logout = () => {
@@ -16,11 +21,12 @@ const Home = () => {
     });
     history.push("/");
   };
+
   return (
     <div className={style.container}>
       <h1>¡Bienvenido a Comfeco!</h1>
       <h2>
-        Hola <span>{username}</span> ahora eres miembro de esta gran comunidad.
+        Hola <span>{data}</span> ahora eres miembro de esta gran comunidad.
       </h2>
       <button
         type="submit"
