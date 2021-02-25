@@ -4,6 +4,7 @@ import style from "./Home.module.scss";
 import styles from "../../assets/style/Main.module.scss";
 import AuthContext from "../../hooks/AuthContext";
 import { types } from "../../types";
+import TittleDescription from "../../components/TittleDescription/TittleDescription";
 
 const Home = () => {
   const { user, dispatch } = useContext(AuthContext);
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <div className={style.container}>
+      <TittleDescription />
       <h1>¡Bienvenido a Comfeco!</h1>
       <h2>
         Hola <span>{data}</span> ahora eres miembro de esta gran comunidad.
