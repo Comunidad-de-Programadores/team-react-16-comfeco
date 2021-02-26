@@ -5,6 +5,7 @@ import styles from "../../assets/style/Main.module.scss";
 import AuthContext from "../../hooks/AuthContext";
 import { types } from "../../types";
 import CountDown from "../../components/CountDown/CountDown";
+import LayoutHome from "../../components/LayoutHome/LayoutHome";
 
 const Home = () => {
   const { user, dispatch } = useContext(AuthContext);
@@ -24,20 +25,33 @@ const Home = () => {
   };
 
   return (
-    <div className={style.container}>
-      <h1>¡Bienvenido a Comfeco!</h1>
-      <h2>
-        Hola <span>{data}</span> ahora eres miembro de esta gran comunidad.
-      </h2>
-      <button
-        type="submit"
-        className={`${styles.btn} ${styles.solid}`}
-        onClick={() => logout()}
-      >
-        Salir
-      </button>
-      <CountDown />
-    </div>
+    <LayoutHome>
+      <div className={style.container}>
+        {/* <h1>¡Bienvenido a Comfeco!</h1>
+        <h2>
+          Hola <span>{data}</span> ahora eres miembro de esta gran comunidad.
+        </h2>
+        <button
+          type="submit"
+          className={`${styles.btn} ${styles.solid}`}
+          onClick={() => logout()}
+        >
+          Salir
+        </button> */}
+        <div className="container--center">
+          <div className="container--left">
+            <div className="carrousel--creators">hola</div>
+            <div className="carrousel--sponsors">hola3</div>
+          </div>
+          <div className="container--right">
+            <div className="count-down">
+              <CountDown />
+            </div>
+            <div className="communities">hola5</div>
+          </div>
+        </div>
+      </div>
+    </LayoutHome>
   );
 };
 
