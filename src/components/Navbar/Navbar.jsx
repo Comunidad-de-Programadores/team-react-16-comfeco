@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { TiArrowSortedDown } from "react-icons/ti";
 import AuthContext from "../../hooks/AuthContext";
-import { links, social } from "../../routes/RoutesHome";
+import { types } from "../../types";
+import { links } from "../../routes/RoutesHome";
 import logo from "../../assets/img/logo.svg";
 import "./Navbar.scss";
 
@@ -21,13 +24,21 @@ const Navbar = () => {
     }
   }, [showLinks]);
 
-  const { user } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
   var data;
   if (user.username != null) {
     data = user.username;
   } else {
     data = user.email;
   }
+  const history = useHistory();
+
+  const logout = () => {
+    dispatch({
+      type: types.logout,
+    });
+    history.push("/");
+  };
   return (
     <>
       <nav>
@@ -60,14 +71,27 @@ const Navbar = () => {
               );
             })}
           </ul> */}
-          <div className="perfil">
-            <p>{data}</p>
-            <div className="avatar">
-              <img
-                src="https://source.unsplash.com/random/40x40"
-                alt="Foto de Perfil"
-              />
+          <div className="header__menu">
+            <div className="header__menu--profile">
+              <p>{data}</p>
+              <div className="avatar">
+                <img
+                  src="https://source.unsplash.com/random/40x40"
+                  alt="Foto de Perfil"
+                />
+              </div>
+              <p>
+                <TiArrowSortedDown />
+              </p>
             </div>
+            <ul>
+              <li>
+                <a href="/">Mi Perfil</a>
+              </li>
+              <li>
+                <a onClick={() => logout()}>Cerrar sesión</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
