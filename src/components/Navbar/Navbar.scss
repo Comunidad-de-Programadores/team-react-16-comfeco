@@ -13,6 +13,7 @@ nav {
     font-family: $title-font;
     background: white;
     box-shadow: $light-shadow-color;
+    position: relative;
 }
 
 .nav-header {
@@ -70,19 +71,60 @@ nav {
     height: 10rem;
 }
 
-.perfil {
+//---------------------------
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 5px 17px;
+    position: absolute;
+    width: 160px;
+    text-align: right;
+    margin: 0px 0px 0px 13vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: $light-shadow-color;
+    font-family: $text-font;
+}
+
+.header__menu:hover ul {
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: $purple-color;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    margin-right: 8px;
     display: flex;
-    flex-direction: row;
-    box-shadow: 10px $purple-color;
+    align-items: center;
+    cursor: pointer;
 }
 
-.avatar {
+.header__menu--profile img {
     margin: auto 10px;
+    width: 40px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
-.avatar img {
-    border-radius: 50%;
+.header__menu--profile p {
+    margin: 0px;
+    color: $purple-color;
+    font-size: 17px;
 }
+
 
 @media screen and (min-width: 800px) {
     .nav-center {
