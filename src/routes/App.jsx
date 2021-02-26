@@ -8,7 +8,6 @@ import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import AuthContext from "../hooks/AuthContext";
 import authReducer from "../hooks/authReducer";
-import Layout from "../components/Layout/Layout";
 
 const init = () => {
   return (
@@ -28,25 +27,22 @@ function App() {
   return (
     <AuthContext.Provider value={{ user, dispatch }}>
       <Router>
-        <Layout>
-          <Switch>
-            <PublicRoute
-              exact
-              path="/"
-              component={AuthForm}
-              isAuth={user.logged}
-            />
-
-            <PrivateRoute
-              exact
-              path="/home"
-              component={Home}
-              isAuth={user.logged}
-            />
-            <Route exact path="/politicas-de-privacidad" component={Privacy} />
-            <Route exact path="/recuperar-contraseña" component={ForgotPass} />
-          </Switch>
-        </Layout>
+        <Switch>
+          <PublicRoute
+            exact
+            path="/"
+            component={AuthForm}
+            isAuth={user.logged}
+          />
+          <Route exact path="/politicas-de-privacidad" component={Privacy} />
+          <Route exact path="/recuperar-contraseña" component={ForgotPass} />
+          <PrivateRoute
+            exact
+            path="/home"
+            component={Home}
+            isAuth={user.logged}
+          />
+        </Switch>
       </Router>
     </AuthContext.Provider>
   );

@@ -14,3 +14,45 @@
 .container h2 span {
     color: var(--primary);
 }
+
+.container--center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // margin: 10px auto;
+}
+
+.container--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrousel--creators {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.carrousel--sponsors {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+.container--right {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.count-down {
+    height: 200px;
+}
+
+.communities {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+}
