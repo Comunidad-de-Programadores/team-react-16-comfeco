@@ -30,7 +30,7 @@ const ForgotPass = () => {
           console.log(error);
         });
     } else {
-      // console.log("Correo invalido");
+      console.log("Correo invalido");
     }
   };
 

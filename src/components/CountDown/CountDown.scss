@@ -1,0 +1,95 @@
+@import "../../assets/style/Vars.scss";
+
+.countContainer {
+    width: 50vw;
+    height: 270px;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    -webkit-box-reflect: below -25px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+}
+
+.countContainer h1 {
+    margin: 0;
+    font-family: $title-font;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    -webkit-transition: letter-spacing 1s ease;
+    transition: letter-spacing 1s ease;
+}
+
+.countContainer h1:hover {
+    letter-spacing: 12px;
+    color: $yellow-color;
+}
+
+.count,
+.itemCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemCount {
+    font-family: $title2-family;
+    margin-right: 5px;
+}
+
+.countTime {
+    margin: 0;
+    padding: 0;
+    font-size: 7rem;
+}
+
+.countText {
+    font-family: $title2-family;
+    font-size: 1rem;
+    padding-bottom: 65px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 560px) {
+    .countContainer {
+        width: 50vw;
+        height: 480px;
+        -webkit-box-reflect: below -450px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+    }
+
+    .countContainer h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        -webkit-transition: letter-spacing 1s ease;
+        transition: letter-spacing 1s ease;
+    }
+
+    .countContainer h1:hover {
+        color: $yellow-color;
+        letter-spacing: 4px;
+    }
+
+    .count {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .itemCount {
+            height: 100px;
+        }
+    }
+
+    .countTime {
+        margin: 0;
+        padding: 0;
+        font-size: 4.5rem;
+    }
+
+    .countText {
+        font-family: $text2-family;
+        font-size: 1rem;
+        margin: 0;
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+}
