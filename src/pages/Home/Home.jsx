@@ -2,6 +2,7 @@ import "./Home.scss";
 import CountDown from "../../components/CountDown/CountDown";
 import LayoutHome from "../../components/LayoutHome/LayoutHome";
 import swal from "sweetalert";
+import Communities from "../../components/Communities/Communities";
 
 const Home = () => {
   swal(
@@ -22,7 +23,9 @@ const Home = () => {
             <div className="count-down">
               <CountDown />
             </div>
-            <div className="communities">Comunidades</div>
+            <div className="communities">
+              <Communities />
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,56 @@
+@import "../../assets/style/Vars.scss";
+
+.communities--title {
+    background-image: linear-gradient(60deg,
+            #69156A 20%,
+            #FFB703 85%);
+    border-radius: 17px;
+    padding-left: 1rem;
+    color: white;
+    font-family: $title-font;
+}
+
+.communities--title h3 {
+    font-weight: 500;
+}
+
+.person {
+    box-shadow: 11px 13px 20px -14px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 11px 13px 20px -14px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 11px 13px 20px -14px rgba(0, 0, 0, 0.32);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 17px;
+    margin-bottom: 1rem;
+}
+
+.person img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.person h4 {
+    font-family: $title-font;
+    color: $purple-color;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: -10px;
+}
+
+.person p {
+    font-family: $text-font;
+}
+
+.person p a {
+    text-decoration: none;
+    color: $yellow-color
+}
