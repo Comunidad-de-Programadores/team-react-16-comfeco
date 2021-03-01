@@ -1,0 +1,33 @@
+@import "../../assets/style/Vars.scss";
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+}
+
+.footer--left {
+    margin-left: 17px;
+}
+
+.footer--right {
+    margin-right: 17px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: $purple-color;
+    // transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: $yellow-color;
+}
