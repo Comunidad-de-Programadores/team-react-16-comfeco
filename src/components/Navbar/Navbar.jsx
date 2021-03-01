@@ -61,25 +61,15 @@ const Navbar = () => {
               })}
             </ul>
           </div>
-          {/* <ul className="social-icons">
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <a href={url}>{icon}</a>
-                </li>
-              );
-            })}
-          </ul> */}
           <div className="header__menu">
             <div className="header__menu--profile">
-              <p>{data}</p>
               <div className="avatar">
                 <img
                   src="https://source.unsplash.com/random/40x40"
                   alt="Foto de Perfil"
                 />
               </div>
+              <p>{data}</p>
               <p>
                 <TiArrowSortedDown />
               </p>
