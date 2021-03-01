@@ -4,6 +4,8 @@ import "./ForgotPass.scss";
 import Error from "../../components/Error/Error";
 import "firebase/auth";
 import { useFirebaseApp } from "reactfire";
+import HeaderRecover from "../../components/HeaderRecover/HeaderRecover";
+import Footer from "../../components/Footer/Footer";
 // import { Redirect } from "react-router-dom";
 
 const ForgotPass = () => {
@@ -36,6 +38,7 @@ const ForgotPass = () => {
 
   return (
     <>
+      <HeaderRecover />
       <div className="container--forgot">
         <h1 className={style.title}>Restablecer Contraseña</h1>
         <form action="" className={`${style.Form}`}>
@@ -58,6 +61,7 @@ const ForgotPass = () => {
           </button>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

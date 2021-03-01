@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+import FooterHome from "../FooterHome/FooterHome";
 import Navbar from "../Navbar/Navbar";
 
 const Layout = ({ children }) => {
@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       {children}
-      <Footer />
+      <FooterHome />
     </>
   );
 };
