@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
             <ul>
               <li>
-                <a href="/">Mi Perfil</a>
+                <a href="/mi-perfil">Mi Perfil</a>
               </li>
               <li>
                 <a onClick={() => logout()}>Cerrar sesión</a>
