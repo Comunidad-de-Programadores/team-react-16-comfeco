@@ -28,6 +28,7 @@ export const CarouselSponsors = () => {
                     ))
                 }
             </Slider>
+            <button className='support'>Apoyar</button>
         </div>
     )
 }
