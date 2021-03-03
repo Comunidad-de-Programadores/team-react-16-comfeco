@@ -11,24 +11,24 @@ const Tabs = () => {
   return (
     <>
       <LayoutHome>
-        <section className="section">
-          <div className="jobs-center">
-            {/* btn container */}
-            <div className="btn-container">
+        <section className="container--tabs">
+          <div className="tabs">
+            {/* tabs btn */}
+            <div className="tabs--btn">
               {contenedor.map((item, index) => {
                 return (
                   <button
                     key={item.id}
                     onClick={() => setValue(index)}
-                    className={`job-btn ${index === value && "active-btn"}`}
+                    className={`btn-tab ${index === value && "btn-active"}`}
                   >
                     {item.title}
                   </button>
                 );
               })}
             </div>
-            {/* job info */}
-            <article className="job-info">
+            {/* tabs info */}
+            <article className="tabs--info">
               <h3>{title}</h3>
               {tab}
             </article>

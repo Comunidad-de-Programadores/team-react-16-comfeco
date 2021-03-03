@@ -43,12 +43,13 @@ nav {
 
 .links a {
     color: $purple-color;
+    font-weight: 500;
     font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     display: block;
     padding: 0.5rem 1rem;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-in-out;
 }
 
 .links a:hover {
