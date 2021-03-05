@@ -18,7 +18,7 @@ const ListEvents = () => {
             <img src={image} alt={name} />
             <p>
               <a href={url} target="blank">
-                Unirse
+                Más Información
               </a>
             </p>
           </article>
