@@ -2,39 +2,45 @@
 
 .container--tabs {
     margin-top: 2rem;
-}
 
-.tabs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-.btn-tab {
-    color: $purple-color;
-    font-family: $text-font;
-    background: transparent;
-    border-color: transparent;
-    font-size: 1.25rem;
-    letter-spacing: 0.1rem;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    padding: 0.8rem 1rem;
-    line-height: 1;
-    outline: none;
-    border-radius: 17px 17px 0 0;
-    box-shadow: $purple-shadow-color;
-}
+        .tabs--btn {
+            .btn-tab {
+                color: $purple-color;
+                font-family: $text-font;
+                background: transparent;
+                border-color: transparent;
+                font-size: 1.25rem;
+                letter-spacing: 0.1rem;
+                margin: 0 0.5rem;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                padding: 0.8rem 1rem;
+                line-height: 1;
+                outline: none;
+                border-radius: 17px 17px 0 0;
+                box-shadow: $purple-shadow-color;
+            }
 
-.btn-tab:hover {
-    color: $yellow-color;
-    box-shadow: $yellow-shadow-color;
-}
+            .btn-tab:hover {
+                color: $yellow-color;
+                box-shadow: $yellow-shadow-color;
+            }
 
-.btn-active {
-    border-color: $yellow-color;
-    color: $yellow-color;
-    box-shadow: $yellow-shadow-color;
+            .btn-active {
+                border-color: $yellow-color;
+                color: $yellow-color;
+                box-shadow: $yellow-shadow-color;
+            }
+        }
+
+        .tabs--info {
+            margin-top: 2rem;
+        }
+    }
 }
