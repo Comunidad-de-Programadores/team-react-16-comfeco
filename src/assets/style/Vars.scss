@@ -15,6 +15,14 @@ $text2-family: 'Roboto',
 sans-serif;
 
 //Colores
+$gradient--v1: linear-gradient(30deg,
+    #69156A 25%,
+    #FFB703 85%);
+$gradient--v2: linear-gradient(60deg,
+    #69156A 20%,
+    #FFB703 35%,
+    #FFB703 53%,
+    #69156A 72%);
 $yellow-color: #FFB703;
 $purple-color: #69156A;
 $white-color: #fff;
