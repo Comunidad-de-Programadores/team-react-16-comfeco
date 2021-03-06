@@ -13,10 +13,10 @@ const Home = () => {
   return (
 
     <LayoutHome>
+      <TittleDescription/>
       <div className="container">
         <div className="container--center">
           <div className="container--left">
-            <TittleDescription/>
             <div className="carrousel--creators">
               Carrusel Creadores de contenido
             </div>
