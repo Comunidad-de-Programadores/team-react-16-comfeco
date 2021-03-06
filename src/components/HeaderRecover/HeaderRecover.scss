@@ -1,0 +1,37 @@
+@import '../../assets/style/Media.scss';
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    margin: 8px 0 4px 8px;
+    z-index: 10;
+}
+
+header .logo {
+    transition: ease-in-out;
+    background-repeat: no-repeat;
+    width: 150px;
+}
+
+.btn {
+    width: 150px;
+    background-color: var(--secondary);
+    border: none;
+    height: 49px;
+    border-radius: 49px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    text-decoration: none;
+}

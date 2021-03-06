@@ -1,69 +1,71 @@
-import React, { useRef, useState, useEffect } from 'react'
-import './CountDown.scss'
+import React, { useRef, useState, useEffect } from "react";
+import "./CountDown.scss";
 
 const CountDown = () => {
-    const [timerDays, setTimerDays] = useState('00');
-    const [timerHours, setTimerHours] = useState('00');
-    const [timerMinutes, setTimerMinutes] = useState('00');
-    const [timerSeconds, setTimerSeconds] = useState('00');
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
 
-    let interval = useRef();
+  let interval = useRef();
 
-    const startTimer = () => {
-        const countDownDate = new Date('Febrary 28, 2021 00:00:00').getTime();
+  const startTimer = () => {
+    const countDownDate = new Date("March 9, 2021 00:00:00").getTime();
 
-        interval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000*60*60*24));
-            const hours = Math.floor((distance % (1000*60*60*24) / (1000*60*60)));
-            const minutes = Math.floor((distance % (1000*60*60) / (1000*60)));
-            const seconds = Math.floor((distance % (1000*60) / (1000)));
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if(distance<0){
-                clearInterval(interval.current);
-            } else {
-                setTimerDays(days);
-                setTimerHours(hours);
-                setTimerMinutes(minutes);
-                setTimerSeconds(seconds);
-            }
-        }, 1000)
-    }
+      if (distance < 0) {
+        clearInterval(interval.current);
+      } else {
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+    }, 1000);
+  };
 
-    useEffect(() => {
-        startTimer();
-        return () => {
-            clearInterval(interval.current);
-        }
-    })
+  useEffect(() => {
+    startTimer();
+    return () => {
+      clearInterval(interval.current);
+    };
+  });
 
-    return (
-        <>
-        <section className="countContainer"> 
-            <h1>Coming soon</h1>
-            <div className="count">
-                <section className="itemCount">
-                    <p className="countTime">{timerDays}</p>
-                    <p className="countText">Dias</p>
-                </section>
-                <section className="itemCount">
-                    <p className="countTime">{timerHours}</p>
-                    <p className="countText">Horas</p>
-                </section>
-                <section className="itemCount">
-                    <p className="countTime">{timerMinutes}</p>
-                    <p className="countText">Minutos</p>
-                </section>
-                <section className="itemCount">
-                    <p className="countTime">{timerSeconds}</p>
-                    <p className="countText">Segundos</p>
-                </section>
-            </div>
-        </section>
-        </>
-    );
-}
+  return (
+    <>
+      <section className="countContainer">
+        <h1>Coming soon</h1>
+        <div className="count">
+          <section className="itemCount">
+            <p className="countText">Dias</p>
+            <p className="countTime">{timerDays}:</p>
+          </section>
+          <section className="itemCount">
+            <p className="countText">Horas</p>
+            <p className="countTime">{timerHours}:</p>
+          </section>
+          <section className="itemCount">
+            <p className="countText">Minutos</p>
+            <p className="countTime">{timerMinutes}:</p>
+          </section>
+          <section className="itemCount">
+            <p className="countText">Segundos</p>
+            <p className="countTime">{timerSeconds}</p>
+          </section>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default CountDown;
