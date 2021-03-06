@@ -28,10 +28,7 @@ const Tabs = () => {
               })}
             </div>
             {/* tabs info */}
-            <article className="tabs--info">
-              <h3>{title}</h3>
-              {tab}
-            </article>
+            <article className="tabs--info">{tab}</article>
           </div>
         </section>
       </LayoutHome>
