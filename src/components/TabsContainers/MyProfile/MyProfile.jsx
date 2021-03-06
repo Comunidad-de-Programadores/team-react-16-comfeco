@@ -1,14 +1,19 @@
 import React from "react";
 import "./MyProfile.scss";
 import ListEvents from "../../ListEvents/ListEvents";
+import { useGlobalContext } from "../../../context/contextEditProfile";
 
 const MyProfile = () => {
+  const { openModal } = useGlobalContext();
   return (
     <>
       <div className="myprofile--container">
         <div className="myprofile--top">
           <div className="top--profile">
             <p>Sección Banner Profile</p>
+            <button onClick={openModal} className="btn">
+              show modal
+            </button>
           </div>
         </div>
         <div className="myprofile--bottom">

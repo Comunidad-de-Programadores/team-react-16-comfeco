@@ -9,6 +9,7 @@ import PublicRoute from "./PublicRoute";
 import AuthContext from "../hooks/AuthContext";
 import authReducer from "../hooks/authReducer";
 import Tabs from "../pages/Tabs/Tabs";
+import { AppProvider } from "../context/contextEditProfile";
 
 const init = () => {
   return (
@@ -43,7 +44,9 @@ function App() {
             component={Home}
             isAuth={user.logged}
           />
-          <Route exact path="/mi-perfil" component={Tabs} />
+          <AppProvider>
+            <Route exact path="/mi-perfil" component={Tabs} />
+          </AppProvider>
         </Switch>
       </Router>
     </AuthContext.Provider>
