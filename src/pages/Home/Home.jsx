@@ -3,6 +3,8 @@ import CountDown from "../../components/CountDown/CountDown";
 import LayoutHome from "../../components/LayoutHome/LayoutHome";
 import swal from "sweetalert";
 import Communities from "../../components/Communities/Communities";
+import { CarouselCreators } from "../../components/Carousels/Creators/CarouselCreators";
+import { CarouselSponsors } from "../../components/Carousels/Sponsors/CarouselSponsors";
 
 const Home = () => {
   swal(
@@ -15,9 +17,11 @@ const Home = () => {
         <div className="container--center">
           <div className="container--left">
             <div className="carrousel--creators">
-              Carrusel Creadores de contenido
+              <CarouselCreators />
             </div>
-            <div className="carrousel--sponsors">Carrusel Sponsors</div>
+            <div className="carrousel--sponsors">
+              <CarouselSponsors />
+            </div>
           </div>
           <div className="container--right">
             <div className="count-down">
