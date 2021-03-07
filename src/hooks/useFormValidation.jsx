@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "firebase/auth";
-import { useFirebaseApp, useUser } from "reactfire";
+import { useFirebaseApp } from "reactfire";
 
 function useFormValidation(stateInitial, validate, handleFormSubmit) {
   const [data, saveData] = useState(stateInitial);
@@ -10,7 +10,6 @@ function useFormValidation(stateInitial, validate, handleFormSubmit) {
 
   //firebase
   const firebase = useFirebaseApp();
-  const user = useUser();
 
   useEffect(() => {
     if (submitform) {

@@ -3,14 +3,17 @@ import "./EditProfile.scss";
 import UserIcon from "../../assets/icon/UserIcon";
 import PasswordIcon from "../../assets/icon/PasswordIcon";
 import EmailIcon from "../../assets/icon/EmailIcon";
-import Error from "../Error/Error";
 import ToolTips from "../ToolTips/ToolTips";
 import style from "../../assets/style/Main.module.scss";
 import { useGlobalContext } from "../../context/contextEditProfile";
 import { FaTimes } from "react-icons/fa";
+import { MdDescription } from "react-icons/md";
 
 const EditProfile = () => {
   const { isModalOpen, closeModal } = useGlobalContext();
+
+  const handleChange = (e) => {};
+  const handleBlur = (e) => {};
   const FormInput = [
     {
       type: "username",
@@ -19,8 +22,6 @@ const EditProfile = () => {
       icon: <UserIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
-      value: username,
-      error: errors.username && <Error>{errors.username}</Error>,
     },
     {
       type: "email",
@@ -29,8 +30,6 @@ const EditProfile = () => {
       icon: <EmailIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
-      value: email,
-      error: errors.email && <Error>{errors.email}</Error>,
     },
     {
       type: "password",
@@ -39,8 +38,6 @@ const EditProfile = () => {
       icon: <PasswordIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
-      value: password,
-      error: errors.password && <Error>{errors.password}</Error>,
     },
     {
       type: "password",
@@ -49,8 +46,14 @@ const EditProfile = () => {
       icon: <PasswordIcon />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
-      value: confirm,
-      error: errors.confirm && <Error>{errors.confirm}</Error>,
+    },
+    {
+      type: "text",
+      name: "Biografía",
+      placeholder: "Biografía",
+      icon: <MdDescription />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
     },
   ];
   return (
@@ -63,6 +66,7 @@ const EditProfile = () => {
         <div className="modal-container">
           <div className="myprofile--top">
             <div className="top--profile">
+              <h2 className={`${style.title} title-edit`}>Editar Perfil</h2>
               <img
                 src="https://source.unsplash.com/random/250x250"
                 alt="Foto de Perfil"
@@ -73,12 +77,7 @@ const EditProfile = () => {
             <FaTimes></FaTimes>
           </button>
           <div className="fromEdit">
-            <form
-              onSubmit={handleSubmit}
-              className={`${style.Form} ${style.signUpForm}`}
-              noValidate
-            >
-              <h2 className={style.title}>Registro</h2>
+            <form className={`${style.Form} formulario`}>
               {FormInput.map((item, i) => {
                 return (
                   <span key={i}>
@@ -112,26 +111,11 @@ const EditProfile = () => {
                   </span>
                 );
               })}
-              <span className={style.terms}>
-                <ToolTips data="Debes aceptar las politicas de privacidad para continuar">
-                  <input
-                    type="checkbox"
-                    name="privacity"
-                    className={style.checkbox}
-                    value={accept}
-                    onChange={handleCheckbox}
-                  />
-                  <label htmlFor="privacity">
-                    Acepta que estás de acuerdo con los Términos de servicio.
-                    Para obtener más información sobre las prácticas de
-                    privacidad, consulte la &nbsp;
-                    <Link to="/politicas-de-privacidad" target="_blank">
-                      Declaración de privacidad.
-                    </Link>
-                  </label>
-                </ToolTips>
-              </span>
-              <input type="submit" className={style.btn} value="Registrarse" />
+              <input
+                type="submit"
+                className={style.btn}
+                value="Guardar Cambios"
+              />
             </form>
           </div>
         </div>
