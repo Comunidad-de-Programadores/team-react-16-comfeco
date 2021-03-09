@@ -6,7 +6,14 @@ import EmailIcon from "../../assets/icon/EmailIcon";
 import ToolTips from "../ToolTips/ToolTips";
 import style from "../../assets/style/Main.module.scss";
 import { useGlobalContext } from "../../context/contextEditProfile";
-import { FaTimes, FaBirthdayCake } from "react-icons/fa";
+import {
+  FaTimes,
+  FaBirthdayCake,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import { GrRestroomWomen, GrRestroomMen } from "react-icons/gr";
 import { BiWorld } from "react-icons/bi";
 import { MdDescription } from "react-icons/md";
@@ -62,6 +69,41 @@ const EditProfile = () => {
       name: "Biografía",
       placeholder: "Biografía",
       icon: <MdDescription />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+    },
+  ];
+
+  const FormInputRedes = [
+    {
+      type: "text",
+      name: "facebook",
+      placeholder: "facebook.com/",
+      icon: <FaFacebook />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+    },
+    {
+      type: "text",
+      name: "twitter",
+      placeholder: "twitter.com/",
+      icon: <FaTwitter />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+    },
+    {
+      type: "text",
+      name: "linkedin",
+      placeholder: "linkedin.com/",
+      icon: <FaLinkedin />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+    },
+    {
+      type: "text",
+      name: "github",
+      placeholder: "github.com/",
+      icon: <FaGithub />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
     },
@@ -124,7 +166,6 @@ const EditProfile = () => {
               })}
               <span>
                 <p>Genero:</p>
-                <p>H</p>
                 <GrRestroomMen />
                 <input
                   type="radio"
@@ -135,7 +176,7 @@ const EditProfile = () => {
                   onBlur={handleBlur}
                   checked
                 />
-                <p>M</p>
+                <p>H</p>
                 <GrRestroomWomen />
                 <input
                   type="radio"
@@ -145,6 +186,7 @@ const EditProfile = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
+                <p>M</p>
                 <p>Fecha de Nacimiento: </p>
                 <FaBirthdayCake />
                 <input
@@ -156,6 +198,26 @@ const EditProfile = () => {
                   onBlur={handleBlur}
                 />
               </span>
+
+              {FormInputRedes.map((item, i) => {
+                return (
+                  <span key={i}>
+                    <div className={item.classContainer}>
+                      {item.icon}
+                      <input
+                        type={item.type}
+                        name={item.name}
+                        placeholder={item.placeholder}
+                        className={item.classInput}
+                        value={item.value}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        required
+                      />
+                    </div>
+                  </span>
+                );
+              })}
               <input
                 type="submit"
                 className={style.btn}
