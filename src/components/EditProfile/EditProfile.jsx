@@ -6,7 +6,9 @@ import EmailIcon from "../../assets/icon/EmailIcon";
 import ToolTips from "../ToolTips/ToolTips";
 import style from "../../assets/style/Main.module.scss";
 import { useGlobalContext } from "../../context/contextEditProfile";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaBirthdayCake } from "react-icons/fa";
+import { GrRestroomWomen, GrRestroomMen } from "react-icons/gr";
+import { BiWorld } from "react-icons/bi";
 import { MdDescription } from "react-icons/md";
 
 const EditProfile = () => {
@@ -44,6 +46,14 @@ const EditProfile = () => {
       name: "confirm",
       placeholder: "Confirmar contraseña",
       icon: <PasswordIcon />,
+      classContainer: `${style.inputField}`,
+      classInput: `${style.input}`,
+    },
+    {
+      type: "text",
+      name: "pais",
+      placeholder: "Pais",
+      icon: <BiWorld />,
       classContainer: `${style.inputField}`,
       classInput: `${style.input}`,
     },
@@ -92,6 +102,7 @@ const EditProfile = () => {
                           value={item.value}
                           onChange={handleChange}
                           onBlur={handleBlur}
+                          required
                         />
                       ) : (
                         <ToolTips data="El password debe contener minimo 8 carateres">
@@ -111,6 +122,40 @@ const EditProfile = () => {
                   </span>
                 );
               })}
+              <span>
+                <p>Genero:</p>
+                <p>H</p>
+                <GrRestroomMen />
+                <input
+                  type="radio"
+                  name="hombre"
+                  className={style.input}
+                  value="1"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  checked
+                />
+                <p>M</p>
+                <GrRestroomWomen />
+                <input
+                  type="radio"
+                  name="mujer"
+                  className={style.input}
+                  value="2"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <p>Fecha de Nacimiento: </p>
+                <FaBirthdayCake />
+                <input
+                  type="date"
+                  name="fecha"
+                  className={style.input}
+                  value="Fecha de Nacimiento"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+              </span>
               <input
                 type="submit"
                 className={style.btn}
