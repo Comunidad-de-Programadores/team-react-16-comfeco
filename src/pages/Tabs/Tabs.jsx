@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Tabs.scss";
 import { containers } from "../../database/dataTabs";
 import LayoutHome from "../../components/LayoutHome/LayoutHome";
+import EditProfile from "../../components/EditProfile/EditProfile";
 
 const Tabs = () => {
   const [contenedor, setPeople] = useState(containers);
@@ -32,6 +33,7 @@ const Tabs = () => {
           </div>
         </section>
       </LayoutHome>
+      <EditProfile />
     </>
   );
 };
