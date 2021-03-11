@@ -10,6 +10,7 @@ import AuthContext from "../hooks/AuthContext";
 import authReducer from "../hooks/authReducer";
 import Tabs from "../pages/Tabs/Tabs";
 import { AppProvider } from "../context/contextEditProfile";
+import { AppProviderGroups } from "../context/contextTabGroups";
 
 const init = () => {
   return (
@@ -44,9 +45,11 @@ function App() {
             component={Home}
             isAuth={user.logged}
           />
-          <AppProvider>
-            <Route exact path="/mi-perfil" component={Tabs} />
-          </AppProvider>
+          <AppProviderGroups>
+            <AppProvider>
+              <Route exact path="/mi-perfil" component={Tabs} />
+            </AppProvider>
+          </AppProviderGroups>
         </Switch>
       </Router>
     </AuthContext.Provider>
