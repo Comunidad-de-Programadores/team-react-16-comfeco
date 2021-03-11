@@ -2,6 +2,7 @@ import React from "react";
 import "./MyProfile.scss";
 import ListEvents from "../../ListEvents/ListEvents";
 import { ProfileCard } from "../../ProfileCard/ProfileCard";
+import { RecentActivities } from "../../RecentActivities/RecentActivities";
 
 const MyProfile = () => {
   return (
@@ -15,7 +16,7 @@ const MyProfile = () => {
         <div className="myprofile--bottom">
           <div className="bottom--left">
             <div className="left--activity">
-              <p>Sección Actividad Reciente</p>
+              <RecentActivities />
             </div>
           </div>
           <div className="bottom--right">
