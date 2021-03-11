@@ -1,6 +1,7 @@
 import React from "react";
 import "./MyProfile.scss";
 import ListEvents from "../../ListEvents/ListEvents";
+import { ProfileCard } from "../../ProfileCard/ProfileCard";
 
 const MyProfile = () => {
   return (
@@ -8,7 +9,7 @@ const MyProfile = () => {
       <div className="myprofile--container">
         <div className="myprofile--top">
           <div className="top--profile">
-            <p>Sección Banner Profile</p>
+            <ProfileCard />
           </div>
         </div>
         <div className="myprofile--bottom">

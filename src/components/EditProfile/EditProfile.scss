@@ -1,0 +1,89 @@
+@import "../../assets/style/Vars.scss";
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* OPEN/CLOSE MODAL */
+.show-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container {
+    background: white;
+    border-radius: 0.25rem;
+    width: 90vw;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow-y: auto;
+
+    .myprofile--top {
+        background: $gradient--v1;
+        width: 100%;
+        height: 35vh;
+
+        .top--profile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("../../assets/img/stars.svg");
+            height: 35vh;
+
+            img {
+                margin-top: 7vh;
+                width: 250px;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+
+            .title-edit {
+                margin-top: 25vh;
+                font-family: $title-font;
+                color: white;
+            }
+
+        }
+    }
+
+    .fromEdit {
+        margin-top: 20vh;
+        width: 100%;
+
+        .formulario {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+
+
+    }
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: hsl(360, 67%, 44%);
+    cursor: pointer;
+}
