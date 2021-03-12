@@ -25,7 +25,7 @@ export const CarouselSponsors = () => {
           <ContentCarousel info={sponsor} key={sponsor.id} />
         ))}
       </Slider>
-      <button className="support">Apoyar</button>
+      {/* <button className="support">Apoyar</button> */}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 @import '../../assets/style/Vars.scss';
 
 .slider_title {
+  font-size: 1rem;
   color: $purple-color;
   font-family: $title-font;
   text-transform: uppercase;
@@ -24,8 +25,7 @@
 
 .card {
   width: 100%;
-  // border: 1px solid #000;
-  height: 200px;
+  min-height: 150px;
   border-radius: 20px;
   margin: auto;
   overflow: hidden;

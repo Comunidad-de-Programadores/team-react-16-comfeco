@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { VscBellDot } from "react-icons/vsc";
 import { TiArrowSortedDown } from "react-icons/ti";
 import AuthContext from "../../hooks/AuthContext";
 import { types } from "../../types";
@@ -62,6 +63,9 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="header__menu">
+            <div className="header__menu--notifi">
+              <VscBellDot />
+            </div>
             <div className="header__menu--profile">
               <div className="avatar">
                 <img

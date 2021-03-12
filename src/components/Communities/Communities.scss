@@ -8,10 +8,11 @@
     padding-left: 1rem;
     color: white;
     font-family: $title-font;
-}
+    box-sizing: border-box;
 
-.communities--title h3 {
-    font-weight: 500;
+    h3 {
+        font-weight: 500;
+    }
 }
 
 .person {
@@ -21,36 +22,39 @@
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 0.75rem;
-    margin-bottom: 0.5rem;
     align-items: center;
     padding: 10px;
+    box-sizing: border-box;
     background-color: white;
     border-radius: 17px;
-    margin-bottom: 1rem;
-}
+    margin: 1rem;
 
-.person img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-.person h4 {
-    font-family: $title-font;
-    color: $purple-color;
-    letter-spacing: 0.1rem;
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: -10px;
-}
+    h4 {
+        font-size: 0.7rem;
+        font-family: $title-font;
+        color: $purple-color;
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+        line-height: 1.25;
+        margin-bottom: -7px;
+    }
 
-.person p {
-    font-family: $text-font;
-}
+    p {
+        font-size: 0.6rem;
+        font-weight: 700;
+        font-family: $text-font;
 
-.person p a {
-    text-decoration: none;
-    color: $yellow-color
+        a {
+            text-decoration: none;
+            color: $yellow-color
+        }
+    }
 }

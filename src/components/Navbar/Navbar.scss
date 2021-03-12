@@ -110,6 +110,11 @@ nav {
     color: $yellow-color;
 }
 
+.header__menu--notifi {
+    margin-top: 1rem;
+    color: $purple-color;
+}
+
 .header__menu--profile {
     margin-right: 8px;
     display: flex;
@@ -125,7 +130,7 @@ nav {
 }
 
 .header__menu--profile p {
-    margin: 0px;
+    margin: 0 0.1rem;
     color: $purple-color;
     font-size: 17px;
 }
