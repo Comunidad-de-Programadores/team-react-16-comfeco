@@ -1,9 +1,8 @@
 @import "../../assets/style/Vars.scss";
 
 .countContainer {
-    min-width: 300px;
     width: 100%;
-    height: 145px;
+    height: 100px;
     background-image: linear-gradient(60deg,
             #69156A 20%,
             #FFB703 85%);
@@ -11,92 +10,50 @@
     border-radius: 20px;
     padding: 7px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.countContainer h1 {
-    margin: 0;
-    font-family: $title-font;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    -webkit-transition: letter-spacing 1s ease;
-    transition: letter-spacing 1s ease;
-}
-
-.countContainer h1:hover {
-    letter-spacing: 12px;
-    color: black;
-}
-
-.count {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.itemCount {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: $title2-family;
-}
 
-.countTime {
-    font-size: 3rem;
-    margin: 0 4px;
-    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
-}
-
-.countText {
-    font-family: $title2-family;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
-}
-
-@media screen and (max-width: 560px) {
-    .countContainer {
-        width: 50vw;
-        height: 480px;
-        -webkit-box-reflect: below -450px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
-    }
-
-    .countContainer h1 {
-        font-size: 2rem;
-        letter-spacing: 2px;
+    h1 {
+        margin: 0;
+        font-family: $title-font;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 3px;
         -webkit-transition: letter-spacing 1s ease;
         transition: letter-spacing 1s ease;
     }
 
-    .countContainer h1:hover {
-        color: $yellow-color;
-        letter-spacing: 4px;
+    h1:hover {
+        letter-spacing: 5px;
+        color: black;
     }
 
     .count {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
 
         .itemCount {
-            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: $title2-family;
+
+            .countTime {
+                font-size: 2rem;
+                margin: 0 4px;
+                -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+            }
+
+            .countText {
+                font-family: $title2-family;
+                font-size: 0.5rem;
+                padding: 0;
+                margin: 0;
+            }
+
         }
-    }
-
-    .countTime {
-        margin: 0;
-        padding: 0;
-        font-size: 4.5rem;
-    }
-
-    .countText {
-        font-family: $text2-family;
-        font-size: 1rem;
-        margin: 0;
-        padding-top: 40px;
-        padding-bottom: 0;
     }
 }

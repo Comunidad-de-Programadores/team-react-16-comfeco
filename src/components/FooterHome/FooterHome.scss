@@ -6,38 +6,38 @@ footer {
     align-items: center;
     height: auto;
     width: 100%;
-}
 
-footer p {
-    font-family: $text-font;
-    text-align: center;
-    font-size: 1.1rem;
-}
+    p {
+        font-family: $text-font;
+        text-align: center;
+        font-size: 1.1rem;
+    }
 
-.footer--left {
-    margin-left: 17px;
-    height: auto;
-}
+    .footer--left {
+        margin-left: 17px;
+        height: auto;
+    }
 
-.footer--right {
-    margin-right: 17px;
-}
+    .footer--right {
+        margin-right: 17px;
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
 
-.social-icons a {
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    color: $purple-color;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
+            a {
+                font-size: 1.5rem;
+                margin: 0 0.5rem;
+                color: $purple-color;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
 
-.social-icons a:hover {
-    color: $yellow-color;
+            a:hover {
+                color: $yellow-color;
+            }
+        }
+    }
 }

@@ -6,12 +6,12 @@ export const links = [
   },
   {
     id: 2,
-    url: "/comunidades",
+    url: "/",
     text: "Comunidades",
   },
   {
     id: 3,
-    url: "/creadores-contenido",
-    text: "Creadores de contenido",
+    url: "/",
+    text: "Creadores",
   },
 ];

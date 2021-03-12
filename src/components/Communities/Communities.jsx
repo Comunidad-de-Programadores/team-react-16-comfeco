@@ -3,7 +3,7 @@ import "./Communities.scss";
 import data from "../../database/dataCommunity";
 
 const Communities = () => {
-  const [people, setPeople] = useState(data);
+  const [people] = useState(data);
   return (
     <>
       <div className="communities--title">
