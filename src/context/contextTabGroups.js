@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 
-const url = "https://my-json-server.typicode.com/Gramajooo/dbtest/db";
+const url = "https://my-json-server.typicode.com/Gramajooo/dbtest/groups?q=";
 const AppContext = React.createContext();
 
 const AppProviderGroups = ({ children }) => {
@@ -14,8 +14,8 @@ const AppProviderGroups = ({ children }) => {
     try {
       const response = await fetch(`${url}${searchTerm}`);
       const data = await response.json();
-      console.log(data.groups);
-      const { groups } = data;
+      // console.log(data.groups);
+      const groups = data;
       if (groups) {
         const newGroups = groups.map((item) => {
           const { id, namegroup, tag, avatarUrl, description } = item;

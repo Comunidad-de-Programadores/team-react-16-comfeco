@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import GroupsContainer from "../../GroupsContainer/GroupsContainer";
 import SearchGroup from "../../SearchGroup/SearchGroup";
-import GroupsList from "../../GroupsList/GroupsList";
+import "./Groups.scss";
 
-const Groups = ({ image, name, id, info, glass }) => {
+export default function Groups() {
   return (
     <>
       <div className="container--group">
-        <div className="group--mygroup"></div>
+        <div className="group--mygroup">
+          <p>polacos</p>
+        </div>
         <div className="group--list">
           <div className="list--search">
             <div className="search--filter">
@@ -20,38 +22,14 @@ const Groups = ({ image, name, id, info, glass }) => {
               </select>
             </div>
             <div className="search--browser">
-              <input type="text" placeholder="Buscar grupo..." />
+              <SearchGroup />
             </div>
           </div>
           <div className="list--groups">
-            <ul>
-              <li>polacos</li>
-              <li>polacos</li>
-              <li>polacos</li>
-              <li>polacos</li>
-              <li>polacos</li>
-            </ul>
+            <GroupsContainer />
           </div>
         </div>
       </div>
-      <p>Groups</p>
-      <SearchGroup />
-      <GroupsList />
-      <article className="cocktail">
-        <div className="img-container">
-          <img src={image} alt={name} />
-        </div>
-        <div className="cocktail-footer">
-          <h3>{name}</h3>
-          <h4>{glass}</h4>
-          <p>{info}</p>
-          <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
-            details
-          </Link>
-        </div>
-      </article>
     </>
   );
-};
-
-export default Groups;
+}

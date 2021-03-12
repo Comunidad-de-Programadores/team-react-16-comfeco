@@ -1,28 +1,26 @@
 import React from "react";
-import Groups from "../TabsContainers/Groups/Groups";
-import Loading from "../Loading/Loading";
-import { useGlobalContext } from "../../context/contextTabGroups";
 
-export default function GroupsList() {
-  const { groups, loading } = useGlobalContext();
-  if (loading) {
-    return <Loading />;
-  }
-  if (groups.length < 1) {
-    return (
-      <h2 className="section-title">
-        no cocktails matched your search criteria
-      </h2>
-    );
-  }
+import { Link } from "react-router-dom";
+// import SearchGroup from "../";
+
+const GroupsList = ({ image, name, id, info, glass }) => {
   return (
-    <section className="section">
-      <h2 className="section-title">cocktails</h2>
-      <div className="cocktails-center">
-        {groups.map((item) => {
-          return <Groups key={item.id} {...item} />;
-        })}
-      </div>
-    </section>
+    <>
+      <article className="cocktail">
+        <div className="img-container">
+          <img src={image} alt={name} />
+        </div>
+        <div className="cocktail-footer">
+          <h3>{name}</h3>
+          <h4>{glass}</h4>
+          <p>{info}</p>
+          <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
+            details
+          </Link>
+        </div>
+      </article>
+    </>
   );
-}
+};
+
+export default GroupsList;

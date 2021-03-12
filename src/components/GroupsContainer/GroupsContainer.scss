@@ -1,0 +1,70 @@
+/* 
+  ====== 
+  Cocktail 
+  ======
+  */
+.container--group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .group--mygroup {
+        width: 100%;
+        background-color: blue;
+    }
+
+    .group--list {
+        width: 100%;
+        // background-color: blueviolet;
+
+        .list--search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+/* 
+  ====== 
+  Cocktails List 
+  ======
+  */
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+
+.cocktails-center img {
+    width: 300px;
+    height: 300px;
+
+}
+
+.cocktails-center {
+    width: var(--smallWidth);
+    margin: 0 auto;
+    max-width: var(--fullWidth);
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    /* align-items: start; */
+}
+
+@media screen and (min-width: 576px) {
+    .cocktails-center {
+        grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    }
+}
