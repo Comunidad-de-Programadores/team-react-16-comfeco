@@ -14,8 +14,8 @@ const Home = () => {
   // );
   return (
     <LayoutHome>
-      <TittleDescription />
       <div className="container">
+        <TittleDescription />
         <div className="container--center">
           <div className="container--left">
             <div className="carrousel--creators">
