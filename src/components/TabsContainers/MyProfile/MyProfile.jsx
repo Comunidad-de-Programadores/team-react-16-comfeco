@@ -20,10 +20,10 @@ const MyProfile = () => {
             </div>
           </div>
           <div className="bottom--right">
-            <div className="right--insignias">
+            <div className="right--badges">
               <p>Sección Insignias</p>
             </div>
-            <div className="right--eventos">
+            <div className="right--events">
               <ListEvents />
             </div>
           </div>
