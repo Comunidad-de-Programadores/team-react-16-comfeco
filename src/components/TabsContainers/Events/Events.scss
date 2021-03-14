@@ -1,0 +1,98 @@
+@import '../../../assets/style/Vars.scss';
+
+.events-wrapper {
+    width: 90%;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+
+    &--left,
+    &--rigth {
+        box-shadow: 4px 4px 5px 0 $gray-color;
+    }
+
+    &--left {
+        border-radius: 10px;
+        overflow: hidden;
+        width: 65%;
+    }
+
+    &--rigth {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0 auto;
+        width: 30%;
+
+        .event-content {
+            cursor: pointer;
+            padding: 5px 0;
+            width: 100%;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $gray-color;
+            }
+
+            &__container {
+                display: flex;
+            }
+
+            &__image {
+                width: 30%;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                    overflow: hidden;
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
+
+            &__info {
+                padding: 0 10px;
+                width: 70%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+
+                h3 {
+                    font-family: $title-font;
+                    font-size: 17px;
+                    margin: 0 0 5px 0;
+                }
+
+                p {
+                    font-family: $text-font;
+                    font-size: 14px;
+                    text-align: justify;
+                    margin: 0;
+                }
+            }
+
+            &__buttons {
+                display: flex;
+                margin-top: 5px;
+                justify-content: space-between;
+
+                a {
+                    background: $purple-color;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-family: $text-font;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    transition: background .3s ease;
+
+                    &:hover {
+                        background: $purple-color-light;
+                    }
+                }
+            }
+        }
+    }
+}
