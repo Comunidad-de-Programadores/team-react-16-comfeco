@@ -1,16 +1,17 @@
 import React from 'react';
 import { FaShare } from 'react-icons/fa'
 
-export const EventsList = ({ eventItem, setEventSelected }) => {
+export const EventsList = ({ eventItem, setEventSelected, setShowModal, showModal }) => {
 
-    const { id, title, long_description, imageUrl } = eventItem;
+    const { id, title, long_description, imageUrl, small_description } = eventItem;
 
     const handleEventSelected = () => {
         setEventSelected({
             id,
             title,
             long_description,
-            imageUrl
+            imageUrl,
+            small_description
         })
     }
 
@@ -26,7 +27,7 @@ export const EventsList = ({ eventItem, setEventSelected }) => {
                 </div>
             </div>
             <div className='event-content__buttons'>
-                <a href='#!'>Participar</a>
+                <a href='#!' onClick={ () => setShowModal( !showModal ) }>Participar</a>
                 <a href='#!'>Más información</a>
                 <a href='#!'><FaShare /></a>
             </div>
