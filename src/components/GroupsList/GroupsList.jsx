@@ -1,21 +1,21 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-// import SearchGroup from "../";
+import "./GroupsList.scss";
 
-const GroupsList = ({ image, name, id, info, glass }) => {
+const GroupsList = ({ image, name, id, info, etiq }) => {
   return (
     <>
-      <article className="cocktail">
+      <article className="groups">
         <div className="img-container">
           <img src={image} alt={name} />
         </div>
-        <div className="cocktail-footer">
+        <div className="groups-footer">
           <h3>{name}</h3>
-          <h4>{glass}</h4>
+          <h4>{etiq}</h4>
           <p>{info}</p>
-          <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
-            details
+          <Link to={``} className="btn btn-primary btn-details">
+            Unirme
           </Link>
         </div>
       </article>

@@ -1,43 +1,55 @@
-.cocktail {
-    background: var(--mainWhite);
+@import '../../assets/style/Vars.scss';
+
+.groups {
+    background: white;
     margin-bottom: 2rem;
-    box-shadow: var(--lightShadow);
-    transition: var(--mainTransition);
+    box-shadow: $medium-shadow-color;
+    transition: all 0.3s ease-in-out;
     display: grid;
     grid-template-rows: auto 1fr;
-    border-radius: var(--mainBorderRadius);
+    border-radius: 0.25rem;
 }
 
-.cocktail:hover {
-    box-shadow: var(--darkShadow);
+.groups:hover {
+    box-shadow: $dark-shadow-color;
 }
 
-.cocktail img {
+.groups img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     object-fit: cover;
-    border-top-left-radius: var(--mainBorderRadius);
-    border-top-right-radius: var(--mainBorderRadius);
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
-.cocktail-footer {
+.groups-footer {
     padding: 1.5rem;
-}
 
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
-    margin-bottom: 0.3rem;
-}
+    p {
+        margin-bottom: 0.8rem;
+        font-family: $text-font;
+        margin: 1rem 0;
+    }
 
-.cocktail-footer h3 {
-    font-size: 2rem;
-}
+    h4 {
+        background-color: $green-color;
+        width: fit-content;
+        padding: 0.5rem;
+        color: white;
+        font-family: $title2-family;
+        border-radius: 7px;
+    }
 
-.cocktail-footer p {
-    color: var(--darkGrey);
-    margin-bottom: 0.5rem;
+    h3 {
+        font-family: $title-font;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -49,52 +61,55 @@
 .btn,
 .btn-white,
 .btn-primary {
+    font-family: $text-font;
     text-transform: uppercase;
-    letter-spacing: var(--mainSpacing);
-    color: var(--primaryColor);
-    border: 2px solid var(--primaryColor);
+    letter-spacing: 0.3rem;
+    color: $purple-color;
+    border: 2px solid $yellow-color;
     padding: 0.45rem 0.8rem;
+    margin: 0;
     display: inline-block;
-    transition: var(--mainTransition);
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    font-size: 0.8rem;
     background: transparent;
-    border-radius: var(--mainBorderRadius);
+    border-radius: 0.25rem;
     display: inline-block;
+    height: auto;
+    width: auto;
 }
 
 .btn:hover {
-    background: var(--primaryColor);
-    color: var(--mainWhite);
+    background: $purple-color;
+    color: white;
 }
 
 .btn-white {
     background: transparent;
-    color: var(--mainWhite);
-    border-color: var(--mainWhite);
+    color: white;
+    border-color: white;
 }
 
 .btn-white:hover {
-    background: var(--mainWhite);
-    color: var(--primaryColor);
+    background: white;
+    color: $purple-color;
 }
 
 .btn-primary {
-    background: var(--primaryColor);
-    color: var(--mainWhite);
+    background: $purple-color;
+    color: white;
     border-color: transparent;
 }
 
 .btn-primary:hover {
-    background: var(--primaryLightColor);
-    color: var(--primaryColor);
+    background: $yellow-color;
+    color: $purple-color;
 }
 
 .btn-block {
     width: 100%;
     display: block;
     margin: 0 auto;
-    box-shadow: var(--lightShadow);
+    box-shadow: $medium-shadow-color;
     text-align: center;
 }
 
@@ -103,6 +118,6 @@
 }
 
 .btn-details:hover {
-    background: var(--primaryLightColor);
-    border-color: var(--primaryLightColor);
+    background: $yellow-color;
+    border-color: $yellow-color;
 }

@@ -9,7 +9,7 @@ export default function SearchGroup() {
   }, []);
 
   function searchGroup() {
-    setSearchTerm(searchValue.current.value);
+    setSearchTerm(`?q=${searchValue.current.value}`);
   }
   function handleSubmit(e) {
     e.preventDefault();

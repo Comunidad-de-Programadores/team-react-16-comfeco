@@ -1,0 +1,25 @@
+@import '../../../assets/style/Vars.scss';
+
+.container--group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .group--mygroup {
+        width: 100%;
+        // background-color: blue;
+    }
+
+    .group--list {
+        width: 100%;
+        // background-color: blueviolet;
+
+        .list--search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -11,16 +11,15 @@ export default function Groups() {
   }
   if (groups.length < 1) {
     return (
-      <h2 className="section-title">
-        no cocktails matched your search criteria
-      </h2>
+      <h2 className="section-title">no groups matched your search criteria</h2>
     );
   }
+
   return (
     <>
       <section className="section">
-        <h2 className="section-title">cocktails</h2>
-        <div className="cocktails-center">
+        <h2 className="section-title">groups</h2>
+        <div className="groups-center">
           {groups.map((item) => {
             return <GroupsList key={item.id} {...item} />;
           })}

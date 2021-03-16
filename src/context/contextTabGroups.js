@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 
-const url = "https://my-json-server.typicode.com/Gramajooo/dbtest/groups?q=";
+const url = "https://my-json-server.typicode.com/Gramajooo/dbtest/groups";
 const AppContext = React.createContext();
 
 const AppProviderGroups = ({ children }) => {
@@ -40,6 +40,7 @@ const AppProviderGroups = ({ children }) => {
   useEffect(() => {
     fetchGroups();
   }, [searchTerm, fetchGroups]);
+
   return (
     <AppContext.Provider value={{ loading, groups, searchTerm, setSearchTerm }}>
       {children}
