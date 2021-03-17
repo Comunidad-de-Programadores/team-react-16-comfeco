@@ -20,6 +20,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            box-sizing: border-box;
+            border-radius: 1rem;
+            box-shadow: $light-shadow-color;
+
+            .search--filter {
+                width: 20%;
+            }
+
+            .search--browser {
+                width: 80%;
+            }
         }
+
     }
 }

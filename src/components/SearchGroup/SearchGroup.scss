@@ -1,38 +1,32 @@
-/* 
-  ====== 
-  Form
-  ======
-  */
-.search {
-    margin-top: 1rem;
-    padding-bottom: 0;
-}
+@import '../../assets/style/Vars.scss';
 
-.search-form {
-    width: var(--smallWidth);
-    margin: 0 auto;
-    max-width: var(--maxWidth);
-    background: var(--mainWhite);
-    padding: 2rem 2.5rem;
-    text-transform: capitalize;
-    border-radius: var(--mainBorderRadius);
-    box-shadow: var(--lightShadow);
+
+// .search-form {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-control label {
-    display: block;
-    margin-bottom: 1.25rem;
     font-weight: bold;
-    letter-spacing: 0.25rem;
-    color: var(--primaryColor);
+    font-family: $text-font;
+    letter-spacing: 0.1rem;
+    color: $purple-color;
+    margin-right: 1rem;
 }
 
 .form-control input {
-    width: 100%;
+    width: 70%;
+    height: 2.3rem;
     border: none;
     border-color: transparent;
-    background: var(--mainBackground);
-    border-radius: var(--mainBorderRadius);
-    padding: 0.5rem;
+    background: rgb(238, 238, 238);
+    border-radius: 3rem;
     font-size: 1.2rem;
 }

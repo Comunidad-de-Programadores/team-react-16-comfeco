@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../../context/contextTabGroups";
+import "./SearchGroup.scss";
 
 export default function SearchGroup() {
   const { setSearchTerm } = useGlobalContext();
@@ -16,10 +17,10 @@ export default function SearchGroup() {
     e.preventDefault();
   }
   return (
-    <section className="section search">
+    <>
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="name">search your favorite cocktail</label>
+          <label htmlFor="name">Busca tu grupo</label>
           <input
             type="text"
             name="name"
@@ -29,6 +30,6 @@ export default function SearchGroup() {
           />
         </div>
       </form>
-    </section>
+    </>
   );
 }

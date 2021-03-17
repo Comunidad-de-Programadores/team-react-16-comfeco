@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../../context/contextTabGroups";
+import "./Filters.scss";
 
 export default function Filters() {
   const { etiquetas, setSearchTerm } = useGlobalContext();
@@ -12,8 +13,8 @@ export default function Filters() {
     e.preventDefault();
   }
   return (
-    <div className="btn-container">
-      <form className="search-form" onSubmit={handleSubmit}>
+    <>
+      <form className="filter-form" onSubmit={handleSubmit}>
         <select onChange={searchGroup}>
           <option className="filter-btn" value="">
             Todos
@@ -27,6 +28,6 @@ export default function Filters() {
           })}
         </select>
       </form>
-    </div>
+    </>
   );
 }

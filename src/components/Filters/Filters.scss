@@ -1,0 +1,14 @@
+@import '../../assets/style/Vars.scss';
+
+
+.filter-form {
+    select {
+        width: 100%;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-family: $text-font;
+        font-weight: 600;
+    }
+}
