@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../context/contextTabGroups";
 
 export default function Filters() {
   const { etiquetas, setSearchTerm } = useGlobalContext();
+  let allEtiquetas = [...new Set(etiquetas.map((item) => item.tag))];
 
   function searchGroup(e) {
     setSearchTerm(`?tag_like=${e.target.value}`);
@@ -13,11 +14,14 @@ export default function Filters() {
   return (
     <div className="btn-container">
       <form className="search-form" onSubmit={handleSubmit}>
-        <select id="" value={setSearchTerm} onChange={searchGroup}>
-          {etiquetas.map((item, index) => {
+        <select onChange={searchGroup}>
+          <option className="filter-btn" value="">
+            Todos
+          </option>
+          {allEtiquetas.map((tag, index) => {
             return (
-              <option className="filter-btn" key={index} value={item.tag}>
-                {item.tag}
+              <option className="filter-btn" key={index} value={tag}>
+                {tag}
               </option>
             );
           })}
