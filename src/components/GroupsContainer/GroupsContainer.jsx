@@ -11,7 +11,7 @@ export default function Groups() {
   }
   if (groups.length < 1) {
     return (
-      <h2 className="section-title">no groups matched your search criteria</h2>
+      <h2 className="section-title">No existen coincidencias de grupos</h2>
     );
   }
 

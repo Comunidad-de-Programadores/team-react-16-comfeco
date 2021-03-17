@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../../context/contextTabGroups";
+
 export default function SearchGroup() {
   const { setSearchTerm } = useGlobalContext();
   const searchValue = React.useRef("");

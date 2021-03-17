@@ -8,13 +8,17 @@ const AppProviderGroups = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [groups, setGroups] = useState([]);
+  const [etiquetas, setEtiquetas] = useState([]);
 
   const fetchGroups = useCallback(async () => {
     setLoading(true);
     try {
+      const responseExtra = await fetch(`${url}`);
+      const dataExtra = await responseExtra.json();
       const response = await fetch(`${url}${searchTerm}`);
       const data = await response.json();
-      // console.log(data.groups);
+
+      setEtiquetas(dataExtra);
       const groups = data;
       if (groups) {
         const newGroups = groups.map((item) => {
@@ -42,7 +46,9 @@ const AppProviderGroups = ({ children }) => {
   }, [searchTerm, fetchGroups]);
 
   return (
-    <AppContext.Provider value={{ loading, groups, searchTerm, setSearchTerm }}>
+    <AppContext.Provider
+      value={{ loading, groups, etiquetas, searchTerm, setSearchTerm }}
+    >
       {children}
     </AppContext.Provider>
   );
