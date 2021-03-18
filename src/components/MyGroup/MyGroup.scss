@@ -1,0 +1,29 @@
+@import '../../assets/style/Vars.scss';
+
+.container--mygroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 17px;
+    box-shadow: $light-shadow-color;
+
+    .mygroup--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        p {
+            font-family: $text-font;
+            color: $purple-color;
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-family: $text-font;
+            color: $yellow-color;
+            font-size: 1rem;
+        }
+    }
+}

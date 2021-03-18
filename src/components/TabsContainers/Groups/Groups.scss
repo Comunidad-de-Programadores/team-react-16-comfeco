@@ -1,19 +1,21 @@
 @import '../../../assets/style/Vars.scss';
 
 .container--group {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
 
     .group--mygroup {
-        width: 100%;
-        // background-color: blue;
+        width: 20%;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
 
     .group--list {
-        width: 100%;
+        width: 80%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
         // background-color: blueviolet;
 
         .list--search {
