@@ -1,0 +1,32 @@
+@import '../../assets/style/Vars.scss';
+
+
+// .search-form {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control label {
+    font-weight: bold;
+    font-family: $text-font;
+    letter-spacing: 0.1rem;
+    color: $purple-color;
+    margin-right: 1rem;
+}
+
+.form-control input {
+    width: 70%;
+    height: 2.3rem;
+    border: none;
+    border-color: transparent;
+    background: rgb(238, 238, 238);
+    border-radius: 3rem;
+    font-size: 1.2rem;
+}

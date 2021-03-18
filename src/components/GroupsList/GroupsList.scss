@@ -1,0 +1,123 @@
+@import '../../assets/style/Vars.scss';
+
+.groups {
+    background: white;
+    margin-bottom: 2rem;
+    box-shadow: $medium-shadow-color;
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 0.25rem;
+}
+
+.groups:hover {
+    box-shadow: $dark-shadow-color;
+}
+
+.groups img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.groups-footer {
+    padding: 1.5rem;
+
+    p {
+        margin-bottom: 0.8rem;
+        font-family: $text-font;
+        margin: 1rem 0;
+    }
+
+    h4 {
+        background-color: $green-color;
+        width: fit-content;
+        padding: 0.5rem;
+        color: white;
+        font-family: $title2-family;
+        border-radius: 7px;
+    }
+
+    h3 {
+        font-family: $title-font;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* 
+  ====== 
+  Buttons 
+  ======
+  */
+.btn,
+.btn-white,
+.btn-primary {
+    font-family: $text-font;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: $purple-color;
+    border: 2px solid $yellow-color;
+    padding: 0.45rem 0.8rem;
+    margin: 0;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 0.25rem;
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
+
+.btn:hover {
+    background: $purple-color;
+    color: white;
+}
+
+.btn-white {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-white:hover {
+    background: white;
+    color: $purple-color;
+}
+
+.btn-primary {
+    background: $purple-color;
+    color: white;
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    background: $yellow-color;
+    color: $purple-color;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: $medium-shadow-color;
+    text-align: center;
+}
+
+.btn-details {
+    padding: 0.25rem 0.4rem;
+}
+
+.btn-details:hover {
+    background: $yellow-color;
+    border-color: $yellow-color;
+}

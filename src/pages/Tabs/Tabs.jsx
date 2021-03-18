@@ -5,10 +5,10 @@ import LayoutHome from "../../components/LayoutHome/LayoutHome";
 import EditProfile from "../../components/EditProfile/EditProfile";
 
 const Tabs = () => {
-  const [contenedor, setPeople] = useState(containers);
+  const [contenedor] = useState(containers);
   const [value, setValue] = useState(0);
 
-  const { title, tab } = containers[value];
+  const { tab } = containers[value];
   return (
     <>
       <LayoutHome>

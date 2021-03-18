@@ -1,0 +1,42 @@
+@import '../../../assets/style/Vars.scss';
+
+.container--group {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
+
+    .group--mygroup {
+        width: 20%;
+        min-width: 270px;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .group--list {
+        width: 80%;
+        min-width: 1050px;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+
+        .list--search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            box-sizing: border-box;
+            border-radius: 1rem;
+            box-shadow: $light-shadow-color;
+
+            .search--filter {
+                width: 20%;
+            }
+
+            .search--browser {
+                width: 80%;
+            }
+        }
+
+    }
+}
