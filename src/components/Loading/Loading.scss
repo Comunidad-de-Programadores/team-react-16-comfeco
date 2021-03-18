@@ -1,12 +1,4 @@
-// .PageLoading {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     min-height: 100vh;
-//     width: 100%;
-// }
-
+@import '../../assets/style/Vars.scss';
 
 .loader,
 .loader:before,
@@ -19,7 +11,7 @@
 }
 
 .loader {
-    color: var(--primaryColor);
+    color: $purple-color;
     text-indent: -9999em;
     margin: 88px auto;
     margin-top: 20rem;

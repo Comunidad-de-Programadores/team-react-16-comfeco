@@ -18,7 +18,7 @@ export default function Groups() {
   return (
     <>
       <section className="section">
-        <h2 className="section-title">groups</h2>
+        <h2 className="section-title">Grupos</h2>
         <div className="groups-center">
           {groups.map((item) => {
             return <GroupsList key={item.id} {...item} />;

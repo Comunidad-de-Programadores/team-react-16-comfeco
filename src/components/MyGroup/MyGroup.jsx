@@ -12,7 +12,7 @@ const MyGroup = () => {
           <Link to={""}>Ir a grupo</Link>
         </div>
         <div className="mygroup--title">
-          <p>polacos</p>
+          <p>Team Polacos</p>
           <img src="https://source.unsplash.com/random/40x40" alt="mygroup" />
         </div>
         <div className="mygroup--members">
@@ -24,7 +24,7 @@ const MyGroup = () => {
                   <p>{item.name}</p>
                   <p>{item.level}</p>
                 </div>
-                <p>{item.member}</p>
+                <span>{item.member}</span>
               </div>
             );
           })}

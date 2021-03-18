@@ -5,7 +5,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: white;
-    border-radius: 17px;
+    border-left: 13px ridge $yellow-color;
+    border-radius: 17px 17px 17px 0px;
     box-shadow: $light-shadow-color;
 
     .mygroup--header {
@@ -17,13 +18,132 @@
         p {
             font-family: $text-font;
             color: $purple-color;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         a {
             font-family: $text-font;
             color: $yellow-color;
             font-size: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $purple-color;
+            }
+        }
+    }
+
+    .mygroup--title {
+        border-top: 13px double rgba($yellow-color, 0.33);
+        border-bottom: 6.5px solid rgba($yellow-color, 0.33);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        p {
+            font-family: $text-font;
+            color: $purple-color;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+    }
+
+    .mygroup--members {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem;
+
+        .members--item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            box-shadow: $light-shadow-color;
+            border-radius: 17px;
+            padding: 1.5rem 1rem;
+            box-sizing: border-box;
+            width: 100%;
+
+            &:nth-child(n) {
+                padding: 0.8rem 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+
+            }
+
+            .item--descrip {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                padding: 0 0.5rem;
+
+                p {
+                    margin: 0;
+                    padding: 0 0.2rem;
+                    font-family: $text-font;
+                    font-size: 0.7rem;
+                }
+
+                :nth-child(2) {
+                    color: $purple-color;
+                    font-weight: 600;
+                }
+            }
+
+            span {
+                font-weight: 700;
+                font-family: $text-font;
+                font-size: 0.6rem;
+            }
+
+        }
+    }
+
+    .mygroup--footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        :nth-child(n) {
+            font-family: $text-font;
+            color: white;
+            background-color: $yellow-color;
+            padding: 0.45rem 0.8rem;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            border: none;
+            border-radius: 17px;
+        }
+
+        :nth-child(1) {
+            font-family: $text-font;
+            background-color: rgb(255, 0, 0);
+
+            &:hover {
+                background-color: rgb(180, 0, 0);
+            }
+        }
+
+        :nth-child(2) {
+
+
+            &:hover {
+                background: $purple-color;
+            }
         }
     }
 }

@@ -8,15 +8,16 @@
 
     .group--mygroup {
         width: 20%;
+        min-width: 270px;
         padding: 0 1rem;
         box-sizing: border-box;
     }
 
     .group--list {
         width: 80%;
+        min-width: 1050px;
         padding: 0 1.5rem;
         box-sizing: border-box;
-        // background-color: blueviolet;
 
         .list--search {
             display: flex;

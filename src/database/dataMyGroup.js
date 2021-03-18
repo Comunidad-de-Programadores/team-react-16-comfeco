@@ -4,7 +4,7 @@ export default [
     id: 1,
     name: "Juanito",
     url: "https://source.unsplash.com/random/40x40",
-    level: "Principiante",
+    level: "Novato",
     member: "Integrante",
   },
   {
@@ -25,14 +25,14 @@ export default [
     id: 4,
     name: "Gatito",
     url: "https://source.unsplash.com/random/40x40",
-    level: "Principiante",
+    level: "Novato",
     member: "Integrante",
   },
   {
     id: 5,
     name: "polacos",
     url: "https://source.unsplash.com/random/40x40",
-    level: "Principiante",
+    level: "Novato",
     member: "Integrante",
   },
 ];

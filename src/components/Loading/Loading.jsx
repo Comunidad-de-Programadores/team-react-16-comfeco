@@ -4,7 +4,11 @@ import "./Loading.scss";
 // import Loader from "../Loader/Loader";
 
 function Loading() {
-  return <div className="loader">{/* <Loader /> */}</div>;
+  return (
+    <>
+      <div className="loader">{/* <Loader /> */}</div>
+    </>
+  );
 }
 
 export default Loading;
