@@ -83,7 +83,7 @@ const Navbar = () => {
                 <a href="/mi-perfil">Mi Perfil</a>
               </li>
               <li>
-                <a onClick={() => logout()}>Cerrar sesión</a>
+                <a href='#!' onClick={() => logout()}>Cerrar sesión</a>
               </li>
             </ul>
           </div>

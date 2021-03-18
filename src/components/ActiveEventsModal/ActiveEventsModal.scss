@@ -1,0 +1,70 @@
+@import '../../assets/style/Vars.scss';
+
+.backdrop {
+   background: $dark-color;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   width: 100vw;
+   z-index: 100;
+}
+
+.active-modal {
+   align-items: center;
+   background: $white-color-light;
+   display: flex;
+   flex-direction: column;
+   height: 350px;
+   justify-content: space-evenly;
+   left: 50%;
+   position: fixed;
+   top: 50%;
+   transform: translate( -50%, -50% );
+   width: 700px;
+   z-index: 200;
+
+   .modal {
+      align-items: center;
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+
+      &-info {
+         h2 {
+            margin: 0;
+            font-family: $title-font;
+         }
+         p {
+            font-family: $text-font;
+            margin: 0;
+         }
+      }
+
+      &-image {
+         height: 160px;
+         img {
+            height: 100%;
+         }
+      }
+   }
+
+   .success-register {
+      align-items: center;
+      display: flex;
+      font-family: $text-font;
+      font-size: 20px;
+      justify-content: space-between;
+      margin: 0;
+      width: 400px;
+
+      svg {
+         font-size: 50px;
+         color: green;
+      }
+   }
+
+   .close-modal svg {
+      font-size: 30px;
+      color: $danger-color;
+   }
+}
