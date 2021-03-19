@@ -60,30 +60,34 @@ const Navbar = () => {
                   </li>
                 );
               })}
-            </ul>
-          </div>
-          <div className="header__menu">
-            <div className="header__menu--notifi">
-              <VscBellDot />
-            </div>
-            <div className="header__menu--profile">
-              <div className="avatar">
-                <img
-                  src="https://source.unsplash.com/random/40x40"
-                  alt="Foto de Perfil"
-                />
-              </div>
-              <p>{data}</p>
-              <p>
-                <TiArrowSortedDown />
-              </p>
-            </div>
-            <ul>
-              <li>
-                <a href="/mi-perfil">Mi Perfil</a>
-              </li>
-              <li>
-                <a href='#!' onClick={() => logout()}>Cerrar sesión</a>
+              <li className="user">
+                <div className="header__menu">
+                  <div className="header__menu--notifi">
+                    <VscBellDot />
+                  </div>
+                  <div className="header__menu--profile">
+                    <div className="avatar">
+                      <img
+                        src="https://source.unsplash.com/random/40x40"
+                        alt="Foto de Perfil"
+                      />
+                    </div>
+                    <p>{data}</p>
+                    <p>
+                      <TiArrowSortedDown />
+                    </p>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="/mi-perfil">Mi Perfil</a>
+                    </li>
+                    <li>
+                      <a href="#!" onClick={() => logout()}>
+                        Cerrar sesión
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
