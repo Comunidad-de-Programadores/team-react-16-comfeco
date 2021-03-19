@@ -1,11 +1,13 @@
-import React from "react";
+import './Badges.scss';
+import { BadgesList } from './BadgesList';
 
 const Badges = () => {
-  return (
-    <>
-      <p>Badges</p>
-    </>
-  );
+   return (
+      <aside className="badges">
+         <h3>Insignias</h3>
+         <BadgesList />
+      </aside>
+   );
 };
 
 export default Badges;
