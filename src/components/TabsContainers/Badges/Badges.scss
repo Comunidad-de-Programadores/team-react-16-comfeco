@@ -1,0 +1,104 @@
+@import '../../../assets/style/Vars.scss';
+
+.badges {
+   h3 {
+      background: $gradient--v1;
+      border-radius: 20px;
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 24px;
+      font-weight: 500;
+      padding: 2px 15px;
+   }
+
+   .show-more {
+      background: $green-color;
+      border-radius: 10px;
+      color: $white-color;
+      border: 1px solid $gray-color;
+      display: block;
+      font-size: 20px;
+      font-family: $text-font;
+      margin-top: 10px;
+      box-shadow: $light-shadow-color;
+      text-align: center;
+      padding: 10px;
+   }
+
+   &-list {
+      border-radius: 10px;
+      box-shadow: $light-shadow-color;
+      margin: 0;
+      padding: 10px;
+
+      &__item {
+         cursor: pointer;
+         display: grid;
+         gap: 10px;
+         grid-template-columns: .2fr 1fr;
+         // height: ;
+
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+
+         .badge-image,
+         .badge-description {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+         }
+
+         .badge-image {
+            background: $yellow-color-light2;
+            border-bottom: 3px solid $yellow-color;
+            border-radius: 10px;
+            padding: 10px;
+            transition: border-color .3s ease-out;
+
+            &:hover {
+               border-color: transparent;
+            }
+
+            svg {
+               font-size: 55px;
+            }
+         }
+         .badge-description {
+            flex-direction: column;
+            text-align: justify;
+
+            .item-description,
+            .badge-message {
+               font-family: $text-font;
+               margin: 0;
+            }
+
+            .item-description {
+               font-size: 13px;
+            }
+
+            .badge-message {
+               background: $yellow-color-light2;
+               border-radius: 5px;
+               padding: 0 5px;
+            }
+
+            progress {
+               border-radius: 5px;
+               border: 1px solid $gray-color;
+               height: 12px;
+               width: 100%;
+            }
+            progress::-webkit-progress-bar {
+               background-color: $white-color;
+               border-radius: 5px;
+            }
+            progress::-webkit-progress-value {
+               background-color: $green-color;
+               border-radius: 5px;
+            }
+         }
+      }
+   }
+}
