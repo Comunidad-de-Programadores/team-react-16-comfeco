@@ -1,11 +1,11 @@
-import React from 'react';
 import dataBadges from '../../../database/dataBadges';
+import { BadgesItem } from './BadgesItem';
 
 export const BadgesTab = () => {
    return (
       <section className="badges-tab">
          {dataBadges.map((item) => (
-            <p>{item.id}</p>
+            <BadgesItem key={item.id} item={item} />
          ))}
       </section>
    );
