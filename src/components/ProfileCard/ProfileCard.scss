@@ -6,9 +6,11 @@
     align-items: center;
     color: $white-color;
     display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    justify-content: space-between;
+    height: 95%;
+    padding: 0.2rem;
+    width: 70%;
+    margin: auto;
 
     @include respond(phone) {
         flex-direction: column;
@@ -20,7 +22,7 @@
         color: inherit;
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: -10rem;
         font-weight: 600;
         font-size: 14px;
         font-family: $title-font;
@@ -48,7 +50,7 @@
     }
 
     &__info {
-        width: 100%;
+        max-width: 550px;
         text-align: justify;
         margin: 0;
 
@@ -97,7 +99,7 @@
         @include respond(phone) {
             display: flex;
             width: 50%;
-            margin-top: 10px;
+            margin-top: 0.2rem;
             justify-content: space-evenly;
         }
         .social-links {
