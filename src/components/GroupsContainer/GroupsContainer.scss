@@ -19,9 +19,15 @@
     margin-top: 1rem;
 }
 
-.groups-center img {
+.groups {
     width: 100%;
-    height: 250px;
+    .img-container {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+    }
 }
 
 .groups-center {
@@ -37,6 +43,7 @@
 
     @include respond(phone) {
         grid-template-columns: 1fr;
+        padding: 0;
     }
 }
 
