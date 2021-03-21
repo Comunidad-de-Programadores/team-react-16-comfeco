@@ -1,5 +1,9 @@
 @import '../../../assets/style/Vars.scss';
+<<<<<<< HEAD
 @import "../../../assets/style/Mixins.scss";
+=======
+@import '../../../assets/style/Mixins.scss';
+>>>>>>> fixes-feature
 
 .events-wrapper {
     width: 90%;
@@ -10,10 +14,16 @@
     padding: 10px;
     margin: auto;
 
+<<<<<<< HEAD
     @include respond(phone) {
         flex-direction: column;
         margin: 0;
         width: 100%;
+=======
+    @include respond(phone){
+        flex-direction: column;
+        padding: 0;
+>>>>>>> fixes-feature
     }
 
     &--left,
@@ -25,6 +35,11 @@
         border-radius: 10px;
         overflow: hidden;
         width: 65%;
+
+        @include respond(phone){
+            margin-bottom: 0.4rem;
+            width: 100%;
+        }
     }
 
     &--rigth {
@@ -32,6 +47,11 @@
         padding: 10px;
         margin: 0 auto;
         width: 30%;
+
+        @include respond(phone){
+            width: 100%;
+            padding: 0;
+        }
 
         .event-content {
             cursor: pointer;

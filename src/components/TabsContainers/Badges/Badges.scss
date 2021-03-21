@@ -37,11 +37,14 @@
    }
 
    &-list {
+      border-radius: 10px;
+      box-shadow: $light-shadow-color;
+      padding: 0.5rem;
+
       &__item {
          cursor: pointer;
          display: grid;
          gap: 5px;
-         border-radius: 10px;
          padding: 5px;
          grid-template-columns: .2fr 1fr;
 

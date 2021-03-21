@@ -1,4 +1,5 @@
 @import '../../assets/style/Vars.scss';
+@import '../../assets/style/Mixins.scss';
 
 .groups {
     background: white;
@@ -8,6 +9,10 @@
     display: grid;
     grid-template-rows: auto 1fr;
     border-radius: 0.25rem;
+
+    @include respond(phone){
+        margin-bottom: 1rem;
+    }
 }
 
 .groups:hover {
@@ -24,6 +29,10 @@
 
 .groups-footer {
     padding: 1.5rem;
+
+    @include respond(phone){
+        font-size: 0.8rem;
+    }
 
     p {
         margin-bottom: 0.8rem;
