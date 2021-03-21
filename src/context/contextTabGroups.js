@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 
-const url = "https://my-json-server.typicode.com/Gramajooo/dbtest/groups";
+const url =
+  "https://my-json-server.typicode.com/Comunidad-de-Programadores/team-react-16-comfeco-apifake/groups";
 const AppContext = React.createContext();
 
 const AppProviderGroups = ({ children }) => {

@@ -14,7 +14,7 @@ const GroupsList = ({ image, name, id, info, etiq }) => {
           <h3>{name}</h3>
           <h4>{etiq}</h4>
           <p>{info}</p>
-          <Link to={``} className="btn btn-primary btn-details">
+          <Link to={`#`} className="btn btn-primary btn-details">
             Unirme
           </Link>
         </div>

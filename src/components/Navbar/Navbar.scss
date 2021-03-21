@@ -41,6 +41,18 @@ nav {
     height: 40px;
 }
 
+.links {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+
+    .user {
+        display: flex;
+    }
+}
+
 .links a {
     color: $purple-color;
     font-weight: 500;
@@ -81,13 +93,13 @@ nav {
     list-style: none;
     padding: 5px 17px;
     position: absolute;
-    width: 160px;
-    text-align: right;
     background-color: white;
     border-radius: 10px;
     box-shadow: $light-shadow-color;
     font-family: $text-font;
     transition: all 3s ease-in-out;
+    width: 160px;
+    text-align: right;
 }
 
 .header__menu:hover ul {
@@ -137,6 +149,7 @@ nav {
 
 
 @media screen and (min-width: 800px) {
+
     .nav-center {
         max-width: 1170px;
         margin: 0 auto;
@@ -144,6 +157,10 @@ nav {
         align-items: center;
         justify-content: space-between;
         padding: 1rem;
+
+        div:nth-last-child(1) {
+            justify-self: end;
+        }
     }
 
     .nav-header {
@@ -156,11 +173,21 @@ nav {
     }
 
     .links-container {
+        width: 100% !important;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
         height: auto !important;
     }
 
     .links {
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .user {
+            margin-left: 30%;
+        }
     }
 
     .links a {

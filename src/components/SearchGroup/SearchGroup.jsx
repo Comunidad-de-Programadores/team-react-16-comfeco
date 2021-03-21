@@ -11,7 +11,7 @@ export default function SearchGroup() {
   }, []);
 
   function searchGroup() {
-    setSearchTerm(`?q=${searchValue.current.value}`);
+    setSearchTerm(`?namegroup_like=${searchValue.current.value}`);
   }
   function handleSubmit(e) {
     e.preventDefault();

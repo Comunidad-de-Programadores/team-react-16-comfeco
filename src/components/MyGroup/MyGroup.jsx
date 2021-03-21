@@ -9,7 +9,7 @@ const MyGroup = () => {
       <div className="container--mygroup">
         <div className="mygroup--header">
           <p>Mi grupo</p>
-          <Link to={""}>Ir a grupo</Link>
+          <Link to={"#"}>Ir a grupo</Link>
         </div>
         <div className="mygroup--title">
           <p>Team Polacos</p>

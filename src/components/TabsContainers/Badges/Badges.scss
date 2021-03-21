@@ -11,7 +11,7 @@
       border-radius: 20px;
       color: $white-color;
       font-family: $title-font;
-      font-size: 24px;
+      font-size: 17px;
       font-weight: 500;
       padding: 2px 15px;
    }
@@ -41,7 +41,6 @@
          display: grid;
          gap: 10px;
          grid-template-columns: .2fr 1fr;
-         // height: ;
 
          &:not(:last-child) {
             margin-bottom: 10px;
@@ -69,6 +68,7 @@
                font-size: 55px;
             }
          }
+
          .badge-description {
             flex-direction: column;
             text-align: justify;
@@ -95,10 +95,12 @@
                height: 12px;
                width: 100%;
             }
+
             progress::-webkit-progress-bar {
                background-color: $white-color;
                border-radius: 5px;
             }
+
             progress::-webkit-progress-value {
                background-color: $green-color;
                border-radius: 5px;
