@@ -1,4 +1,5 @@
 @import "../../assets/style/Vars.scss";
+@import "../../assets/style/Mixins.scss";
 
 .profile-card {
     position: relative;
@@ -6,9 +7,14 @@
     color: $white-color;
     display: flex;
     justify-content: center;
-    margin: auto;
     height: 100%;
     width: 70%;
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
 
     .edit-profile {
         color: inherit;
@@ -19,6 +25,10 @@
         font-size: 14px;
         font-family: $title-font;
         transition: all 0.3s ease-in-out;
+
+        @include respond(phone) {
+            right: 5px;
+        }
     }
 
     .edit-profile:hover {
@@ -26,8 +36,14 @@
     }
 
     &__image {
+        @include respond(phone) {
+            width: 90px;
+        }
         img {
             border-radius: 50%;
+            @include respond(phone) {
+                width: 100%;
+            }
         }
     }
 
@@ -42,6 +58,13 @@
             font-size: 23px;
             text-transform: capitalize;
             font-family: $title-font;
+        }
+
+        h1.username,
+        h2.profession {
+            @include respond(phone) {
+                text-align: center;
+            }
         }
 
         h2.profession {
@@ -59,10 +82,20 @@
             font-size: 12px;
             margin: 0;
             font-weight: lighter;
+
+            @include respond(phone) {
+                display: none;
+            }
         }
     }
 
     &__social {
+        @include respond(phone) {
+            display: flex;
+            width: 50%;
+            margin-top: 10px;
+            justify-content: space-evenly;
+        }
         .social-links {
             align-items: center;
             color: $white-color;
@@ -78,6 +111,10 @@
             p {
                 font-size: 12px;
                 margin: 8px 0 8px 8px;
+
+                @include respond(phone) {
+                    display: none;
+                }
             }
 
             &:hover {

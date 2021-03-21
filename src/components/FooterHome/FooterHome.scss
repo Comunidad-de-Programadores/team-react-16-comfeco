@@ -1,4 +1,5 @@
 @import "../../assets/style/Vars.scss";
+@import "../../assets/style/Mixins.scss";
 
 footer {
     display: flex;
@@ -7,15 +8,29 @@ footer {
     height: auto;
     width: 100%;
 
+    @include respond(phone) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
     p {
         font-family: $text-font;
         text-align: center;
         font-size: 0.8rem;
+
+        @include respond(phone) {
+            font-size: 0.7rem;
+        }
     }
 
     .footer--left {
         margin-left: 17px;
         height: auto;
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
     }
 
     .footer--right {
@@ -26,6 +41,16 @@ footer {
             justify-content: center;
             align-items: center;
             margin: 0;
+
+            @include respond(phone) {
+                padding: 0;
+            }
+
+            li p {
+                @include respond(phone) {
+                    display: none;
+                }
+            }
 
             a {
                 font-size: 1.3rem;
