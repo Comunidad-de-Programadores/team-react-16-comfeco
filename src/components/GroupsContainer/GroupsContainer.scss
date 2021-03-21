@@ -1,4 +1,5 @@
 @import '../../assets/style/Vars.scss';
+@import '../../assets/style/Mixins.scss';
 
 .section {
     padding: 2rem 0;
@@ -18,9 +19,15 @@
     margin-top: 1rem;
 }
 
-.groups-center img {
+.groups {
     width: 100%;
-    height: 250px;
+    .img-container {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+    }
 }
 
 .groups-center {
@@ -33,6 +40,11 @@
     row-gap: 2rem;
     column-gap: 5rem;
     align-items: start;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 576px) {

@@ -1,8 +1,14 @@
 @import '../../../assets/style/Vars.scss';
+@import '../../../assets/style/Mixins.scss';
 
 .badges-tab {
    box-shadow: $light-shadow-color;
-   padding: 15px;
+   border-radius: 10px;
+   padding: 5px;
+   @include respond(phone) {
+      width: 90%;
+      margin: auto;
+   }
 }
 
 .badges {
@@ -31,15 +37,12 @@
    }
 
    &-list {
-      border-radius: 10px;
-      box-shadow: $light-shadow-color;
-      margin: 0;
-      padding: 10px;
-
       &__item {
          cursor: pointer;
          display: grid;
-         gap: 10px;
+         gap: 5px;
+         border-radius: 10px;
+         padding: 5px;
          grid-template-columns: .2fr 1fr;
 
          &:not(:last-child) {

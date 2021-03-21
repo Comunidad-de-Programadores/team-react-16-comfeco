@@ -1,4 +1,5 @@
 @import '../../../assets/style/Vars.scss';
+@import "../../../assets/style/Mixins.scss";
 
 .events-wrapper {
     width: 90%;
@@ -8,6 +9,12 @@
     align-items: center;
     padding: 10px;
     margin: auto;
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
 
     &--left,
     &--rigth {
