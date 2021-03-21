@@ -20,7 +20,7 @@ export const ProfileCard = () => {
       </a>
       <div className="profile-card__image">
         <img
-          src="https://source.unsplash.com/random/150x150"
+          src="https://source.unsplash.com/random/130x130"
           alt="Foto de perfil"
           draggable="false"
         />

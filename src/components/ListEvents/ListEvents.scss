@@ -8,7 +8,7 @@
     padding-left: 1rem;
     color: $white-color;
     font-family: $title-font;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     h3 {
         font-weight: 500;
@@ -47,7 +47,7 @@
         background-color: $white-color-light;
         font-family: $title-font;
         color: $purple-color;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-transform: capitalize;
     }
 
@@ -55,16 +55,16 @@
         font-family: $text-font;
         margin: 0;
         position: absolute;
-        bottom: 60px;
+        bottom: 2rem;
 
         a {
             color: $white-color;
             position: relative;
             font-weight: 700;
-            padding: 1rem;
+            padding: 0.7rem;
             border-radius: 1.7rem;
             height: 2.2rem;
-            font-size: 1.1rem;
+            font-size: 0.6rem;
             background-color: rgba(255, 183, 3, 0.8);
             text-align: center;
             text-decoration: none;

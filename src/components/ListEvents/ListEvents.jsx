@@ -3,7 +3,7 @@ import "./ListEvents.scss";
 import data from "../../database/dataEvents";
 
 const ListEvents = () => {
-  const [eventos, setEventos] = useState(data);
+  const [eventos] = useState(data);
 
   return (
     <>
