@@ -1,4 +1,5 @@
 @import '../../assets/style/Vars.scss';
+@import '../../assets/style/Mixins.scss';
 
 .section {
     padding: 2rem 0;
@@ -33,6 +34,10 @@
     row-gap: 2rem;
     column-gap: 5rem;
     align-items: start;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (min-width: 576px) {

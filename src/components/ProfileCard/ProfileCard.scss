@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 70%;
+    width: 100%;
 
     @include respond(phone) {
         flex-direction: column;
@@ -20,14 +20,14 @@
         color: inherit;
         position: absolute;
         top: 10px;
-        right: -140px;
+        right: 10px;
         font-weight: 600;
         font-size: 14px;
         font-family: $title-font;
         transition: all 0.3s ease-in-out;
 
         @include respond(phone) {
-            right: 5px;
+            right: 10px;
         }
     }
 
@@ -48,9 +48,13 @@
     }
 
     &__info {
-        width: 500px;
+        width: 100%;
         text-align: justify;
-        margin: 0 20px;
+        margin: 0;
+
+        @include respond(phone) {
+            // margin: 0;
+        }
 
         h1.username {
             font-weight: 700;
@@ -68,7 +72,7 @@
         }
 
         h2.profession {
-            margin: 7px 0;
+            margin: 0;
             font-size: 14px;
             font-weight: normal;
         }
@@ -106,6 +110,10 @@
 
             svg {
                 font-size: 17px;
+
+                @include respond(phone) {
+                    font-size: 25px;
+                }
             }
 
             p {
