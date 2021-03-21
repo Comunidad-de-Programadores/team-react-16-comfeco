@@ -1,4 +1,5 @@
 @import '../../../assets/style/Vars.scss';
+@import '../../../assets/style/Mixins.scss';
 
 .container--group {
     display: flex;
@@ -6,18 +7,40 @@
     box-sizing: border-box;
     padding: 0 1rem;
 
+    @include respond(phone) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
     .group--mygroup {
         width: 20%;
         min-width: 270px;
         padding: 0 1rem;
         box-sizing: border-box;
+
+        @include respond(phone) {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
     }
 
     .group--list {
-        width: 80%;
-        min-width: 1050px;
+        width: 100%;
+        max-width: 1050px;
         padding: 0 1.5rem;
         box-sizing: border-box;
+
+        .list--groups {
+            display: flex;
+            width: 100%;
+
+            section {
+                width: 100%;
+            }
+        }
 
         .list--search {
             display: flex;
@@ -29,8 +52,18 @@
             border-radius: 1rem;
             box-shadow: $light-shadow-color;
 
+            @include respond(phone) {
+                flex-direction: column;
+                padding: 1rem 0;
+                width: 100%;
+            }
+
             .search--filter {
                 width: 20%;
+
+                @include respond(phone) {
+                    width: 50%;
+                }
             }
 
             .search--browser {
